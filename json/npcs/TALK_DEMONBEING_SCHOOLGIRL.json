@@ -1,159 +1,130 @@
 [
-	{
-		"id": "TALK_DEMONBEING_SCHOOLGIRL",
-		"type": "talk_topic",
-		"dynamic_line": [
-			"Kyaaaah! ...Ah! S-sorry I startled you, I was sure you were one of them Demons...",
-			"Um... You're not a Demon yet, right? Right?!"
-		],
-		"responses": [
-			{
-				"text": "Calm down, I'm a human!",
-				"topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET"
-			},
-			{
-				"text": "[Mutation Threshold] Calm down, I'm a human! ...Well, at least I used to be.",
-				"topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET",
-				"condition": {
-					"u_has_any_trait": [
-						"THRESH_LIZARD", "THRESH_BIRD", "THRESH_FISH", "THRESH_BEAST", "THRESH_FELINE", "THRESH_LUPINE", "THRESH_URSINE", "THRESH_CATTLE", "THRESH_INSECT", "THRESH_PLANT", "THRESH_SLIME", "THRESH_TROGLOBITE", "THRESH_CEPHALOPOD", "THRESH_SPIDER", "THRESH_RAT", "THRESH_ELFA", "THRESH_CHIMERA", "THRESH_RAPTOR", "THRESH_MOUSE", "THRESH_MARLOSS", "THRESH_MYCUS", "THRESH_FIEND"
-					]
-				}
-			},
-			{
-				"text": "[Mutation Threshold] Too bad. I'm no longer a human.",
-				"trial": {
-					"type": "INTIMIDATE",
-					"difficulty": 100
-				},
-				"success": { "topic": "TALK_DONE", "effect": "flee", "opinion": { "trust": -20, "fear": 20 } },
-				"failure": { "topic": "TALK_DONE", "effect": "hostile" },
-				"condition": { "u_has_trait": "THRESH_FIEND" }
-			}
-		]
-	},
-	{
-		"id": "TALK_DEMONBEING_SCHOOLGIRL_GREET",
-		"type": "talk_topic",
-		"dynamic_line": "Thank goodness, I'm glad there are still decent people around...",
-		"responses": [
-			{
-				"text": "What happened here?",
-				"topic": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_1"
-			},
-			{
-				"text": "[Perception 7] I don't mean to be rude, but are you a human yourself? That tail...",
-				"topic": "TALK_DB_SCHOOLGIRL_YOURTAIL",
-				"condition": { "u_has_perception": 7 }
-			},
-			{
-				"text": "It's very dangerous to stay here.  How about cooperating together?",
-				"trial": {
-					"type": "PERSUADE",
-					"difficulty": 50
-				},
-				"success": {
-					"topic": "TALK_DEMONBEING_SCHOOLGIRL_JOINME"
-				},
-				"failure": {
-					"topic": "TALK_DEMONBEING_SCHOOLGIRL_WARY"
-				}
-			},
-			{
-				"text": "Sorry, but I don't have time for talking.",
-				"topic": "TALK_DB_SCHOOLGIRL_STAYHERE"
-			}
-		]
-	},
-	{
-		"id": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_1",
-		"type": "talk_topic",
-		"dynamic_line": "I dunno...  But the Demons just showed up out of the blue.  You do know about <the_cataclysm>, right?  Local students and teachers were told to evacuate, and we all gathered here.  And then...",
-		"responses": [
-			{
-				"text": "Is that so...",
-				"topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET"
-			},
-			{
-				"text": "[Intelligence 9] You gathered for evacuation?  So that means Demons were not occupying the school to begin with?",
-				"topic": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_2",
-				"condition": { "u_has_intelligence": 9 }
-			}
-		]
-	},
-	{
-		"id": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_2",
-		"type": "talk_topic",
-		"dynamic_line": "Yes... That's right.  We didn't see any Demons until later.  I remember seeing some strangers among the refugees.  Our principal had some acquaintances so I thought they were related...  Oh, I'm pretty sure it was them who started doing something really fishy in the courtyard!",
-		"responses": [
-			{
-				"text": "I see...",
-				"topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET"
-			}
-		]
-	},
-	{
-		"id": "TALK_DB_SCHOOLGIRL_YOURTAIL",
-		"type": "talk_topic",
-		"dynamic_line": "Yes, I am a human!  And the tail...  Well, I was attacked...  B-But nothing else, I swear!  Well, they stole my first kiss...  But other than that, I'm still, um, pure in every sense!  I'm still a virgin after all!",
-		"responses": [
-			{
-				"text": "Sorry, I didn't mean to...",
-				"success": {
-					"effect": "follow",
-					"opinion": {
-						"anger": 1
-					},
-					"topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET"
-				}
-			}
-		]
-	},
-	{
-		"id": "TALK_DEMONBEING_SCHOOLGIRL_JOINME",
-		"type": "talk_topic",
-		"dynamic_line": "Yup, you got it!  Let's hurry up and get out of here!",
-		"responses": [
-			{
-				"text": "Let's go!",
-				"effect": "follow",
-				"opinion": { "trust": 1, "value": 2 },
-				"topic": "TALK_DONE"
-			}
-		]
-	},
-	{
-		"id": "TALK_DEMONBEING_SCHOOLGIRL_WARY",
-		"type": "talk_topic",
-		"dynamic_line": "...Sorry, it's not like I don't trust you, but...  I'm still scared.",
-		"responses": [
-			{
-				"text": "I see, so be it then.",
-				"topic": "TALK_DONE"
-			}
-		]
-	},
-	{
-		"id": "TALK_DB_SCHOOLGIRL_STAYHERE",
-		"type": "talk_topic",
-		"dynamic_line": [
-			{
-				"u_male": [
-					"Okay...  But be careful.  The men were all caught by the succubi and turned into demons...",
-					"Okay...  But be careful.  It seems like those incubi don't care even if you're a man..."
-				],
-				"u_female": [
-					"Okay...  But be careful.  The women were all caught by the incubi and turned into demons...",
-					"Okay...  But be careful.  The women were all caught by the incubi and got raped relentlessly...  It looked worse than just dying...",
-					"Okay...  But be careful.  It seems like those succubi don't care even if you're a woman..."
-				]
-			}
-		],
-		"responses": [
-			{
-				"text": "(Leave)",
-				"topic": "TALK_DONE"
-			}
-		]
-	}
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "Kyaaaah! ...Ah! S-sorry I startled you, I was sure you were one of them Demons...",
+      "Um... You're not a Demon yet, right? Right?!"
+    ],
+    "responses": [
+      { "text": "Calm down, I'm a human!", "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" },
+      {
+        "text": "[Mutation Threshold] Calm down, I'm a human! ...Well, at least I used to be.",
+        "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET",
+        "condition": {
+          "u_has_any_trait": [
+            "THRESH_LIZARD",
+            "THRESH_BIRD",
+            "THRESH_FISH",
+            "THRESH_BEAST",
+            "THRESH_FELINE",
+            "THRESH_LUPINE",
+            "THRESH_URSINE",
+            "THRESH_CATTLE",
+            "THRESH_INSECT",
+            "THRESH_PLANT",
+            "THRESH_SLIME",
+            "THRESH_TROGLOBITE",
+            "THRESH_CEPHALOPOD",
+            "THRESH_SPIDER",
+            "THRESH_RAT",
+            "THRESH_ELFA",
+            "THRESH_CHIMERA",
+            "THRESH_RAPTOR",
+            "THRESH_MOUSE",
+            "THRESH_MARLOSS",
+            "THRESH_MYCUS",
+            "THRESH_FIEND"
+          ]
+        }
+      },
+      {
+        "text": "[Mutation Threshold] Too bad. I'm no longer a human.",
+        "trial": { "type": "INTIMIDATE", "difficulty": 100 },
+        "success": { "topic": "TALK_DONE", "effect": "flee", "opinion": { "trust": -20, "fear": 20 } },
+        "failure": { "topic": "TALK_DONE", "effect": "hostile" },
+        "condition": { "u_has_trait": "THRESH_FIEND" }
+      }
+    ]
+  },
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL_GREET",
+    "type": "talk_topic",
+    "dynamic_line": "Thank goodness, I'm glad there are still decent people around...",
+    "responses": [
+      { "text": "What happened here?", "topic": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_1" },
+      {
+        "text": "[Perception 7] I don't mean to be rude, but are you a human yourself? That tail...",
+        "topic": "TALK_DB_SCHOOLGIRL_YOURTAIL",
+        "condition": { "u_has_perception": 7 }
+      },
+      {
+        "text": "It's very dangerous to stay here.  How about cooperating together?",
+        "trial": { "type": "PERSUADE", "difficulty": 50 },
+        "success": { "topic": "TALK_DEMONBEING_SCHOOLGIRL_JOINME" },
+        "failure": { "topic": "TALK_DEMONBEING_SCHOOLGIRL_WARY" }
+      },
+      { "text": "Sorry, but I don't have time for talking.", "topic": "TALK_DB_SCHOOLGIRL_STAYHERE" }
+    ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_1",
+    "type": "talk_topic",
+    "dynamic_line": "I dunno...  But the Demons just showed up out of the blue.  You do know about <the_cataclysm>, right?  Local students and teachers were told to evacuate, and we all gathered here.  And then...",
+    "responses": [
+      { "text": "Is that so...", "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" },
+      {
+        "text": "[Intelligence 9] You gathered for evacuation?  So that means Demons were not occupying the school to begin with?",
+        "topic": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_2",
+        "condition": { "u_has_intelligence": 9 }
+      }
+    ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_WHATSHAPPEN_2",
+    "type": "talk_topic",
+    "dynamic_line": "Yes... That's right.  We didn't see any Demons until later.  I remember seeing some strangers among the refugees.  Our principal had some acquaintances so I thought they were related...  Oh, I'm pretty sure it was them who started doing something really fishy in the courtyard!",
+    "responses": [ { "text": "I see...", "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" } ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_YOURTAIL",
+    "type": "talk_topic",
+    "dynamic_line": "Yes, I am a human!  And the tail...  Well, I was attacked...  B-But nothing else, I swear!  Well, they stole my first kiss...  But other than that, I'm still, um, pure in every sense!  I'm still a virgin after all!",
+    "responses": [
+      {
+        "text": "Sorry, I didn't mean to...",
+        "success": { "effect": "follow", "opinion": { "anger": 1 }, "topic": "TALK_DEMONBEING_SCHOOLGIRL_GREET" }
+      }
+    ]
+  },
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL_JOINME",
+    "type": "talk_topic",
+    "dynamic_line": "Yup, you got it!  Let's hurry up and get out of here!",
+    "responses": [ { "text": "Let's go!", "effect": "follow", "opinion": { "trust": 1, "value": 2 }, "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_DEMONBEING_SCHOOLGIRL_WARY",
+    "type": "talk_topic",
+    "dynamic_line": "...Sorry, it's not like I don't trust you, but...  I'm still scared.",
+    "responses": [ { "text": "I see, so be it then.", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_DB_SCHOOLGIRL_STAYHERE",
+    "type": "talk_topic",
+    "dynamic_line": [
+      {
+        "u_male": [
+          "Okay...  But be careful.  The men were all caught by the succubi and turned into demons...",
+          "Okay...  But be careful.  It seems like those incubi don't care even if you're a man..."
+        ],
+        "u_female": [
+          "Okay...  But be careful.  The women were all caught by the incubi and turned into demons...",
+          "Okay...  But be careful.  The women were all caught by the incubi and got raped relentlessly...  It looked worse than just dying...",
+          "Okay...  But be careful.  It seems like those succubi don't care even if you're a woman..."
+        ]
+      }
+    ],
+    "responses": [ { "text": "(Leave)", "topic": "TALK_DONE" } ]
+  }
 ]

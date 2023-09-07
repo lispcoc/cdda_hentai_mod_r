@@ -1,57 +1,26 @@
 {
-	"type": "mod_tileset",
-	"compatibility": [ "Custom Tileset", "MshockXottoplus", "MSX++DEAD_PEOPLE" ],
-	"tile_info": [
-		{
-			"height": 32,
-			"width": 32
-		}
-	],
-	"tiles-new": [
-		{
-			"file": "tile/hentai_items.png",
-			"tiles": [
-				{
-					"id": "h_semen",
-					"fg": 0,
-					"rotates": false
-				},
-				{
-					"id": "d_cum",
-					"fg": 1,
-					"rotates": false
-				},
-				{
-					"id": ["wrapped_condom", "wrapped_condom_danger"],
-					"fg": 2,
-					"rotates": false
-				},
-				{
-					"id": ["condom", "condom_danger", "used_condom"],
-					"fg": 3,
-					"rotates": false
-				},
-				{
-					"id": "holy_choker",
-					"fg": 4,
-					"rotates": false
-				},
-				{
-					"id": "medieval_bottle",
-					"fg": 5,
-					"rotates": false
-				},
-				{
-					"id": "bio_onahole",
-					"fg": 6,
-					"rotates": false
-				},
-				{
-					"id": ["scroll_of_naming", "scroll_of_artifact"],
-					"fg": 7,
-					"rotates": false
-				}
-			]
-		}
-	]
+  "type": "mod_tileset",
+  "compatibility": [
+    "Custom Tileset",
+    "MshockXottoplus",
+    "MSX++DEAD_PEOPLE"
+  ],
+  "tile_info": [
+    { "height": 32, "width": 32 }
+  ],
+  "tiles-new": [
+    {
+      "file": "tile/hentai_items.png",
+      "tiles": [
+        { "id": "h_semen", "fg": 0, "rotates": false },
+        { "id": "d_cum", "fg": 1, "rotates": false },
+        { "id": [ "wrapped_condom", "wrapped_condom_danger" ], "fg": 2, "rotates": false },
+        { "id": [ "condom", "condom_danger", "used_condom" ], "fg": 3, "rotates": false },
+        { "id": "holy_choker", "fg": 4, "rotates": false },
+        { "id": "medieval_bottle", "fg": 5, "rotates": false },
+        { "id": "bio_onahole", "fg": 6, "rotates": false },
+        { "id": [ "scroll_of_naming", "scroll_of_artifact" ], "fg": 7, "rotates": false }
+      ]
+    }
+  ]
 }

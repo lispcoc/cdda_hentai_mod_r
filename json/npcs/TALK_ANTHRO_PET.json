@@ -1,68 +1,38 @@
 [
-	{
-		"id": "TALK_ANTHRO_PET",
-		"type": "talk_topic",
-		"dynamic_line": "This form...!  What on earth?!",
-		"responses": [
-			{
-				"text": "I used human serum.",
-				"topic": "TALK_ANTHRO_PET_ITS_MY_TREAT"
-			},
-			{
-				"text": "Hold on, I need to think...",
-				"topic": "TALK_DONE"
-			}
-		]
-	},
-	{
-		"id": "TALK_ANTHRO_PET_ITS_MY_TREAT",
-		"type": "talk_topic",
-		"dynamic_line": "I don't really get it, but sure...  So, what now?",
-		"responses": [
-			{
-				"text": "I'm glad we were able to talk like this.  Come.  Let's move on together.",
-				"success": {
-					"effect": "follow",
-					"opinion": {
-						"trust": 5,
-						"value": 5
-					},
-					"topic": "TALK_ANTHRO_PET_BE_FELLOW"
-				}
-			},
-			{
-				"text": "You're still my pet, don't forget that.  Come now, don't keep me waiting... pet.",
-				"success": {
-					"effect": "follow",
-					"opinion": {
-						"fear": 5,
-						"value": 5
-					},
-					"topic": "TALK_ANTHRO_PET_BADBOY"
-				}
-			}
-		]
-	},
-	{
-		"id": "TALK_ANTHRO_PET_BE_FELLOW",
-		"type": "talk_topic",
-		"dynamic_line": "Yes, Master!",
-		"responses": [
-			{
-				"text": "(End Talking)",
-				"topic": "TALK_DONE"
-			}
-		]
-	},
-	{
-		"id": "TALK_ANTHRO_PET_BADBOY",
-		"type": "talk_topic",
-		"dynamic_line": "Yes, Master.",
-		"responses": [
-			{
-				"text": "(End Talking)",
-				"topic": "TALK_DONE"
-			}
-		]
-	}
+  {
+    "id": "TALK_ANTHRO_PET",
+    "type": "talk_topic",
+    "dynamic_line": "This form...!  What on earth?!",
+    "responses": [
+      { "text": "I used human serum.", "topic": "TALK_ANTHRO_PET_ITS_MY_TREAT" },
+      { "text": "Hold on, I need to think...", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_PET_ITS_MY_TREAT",
+    "type": "talk_topic",
+    "dynamic_line": "I don't really get it, but sure...  So, what now?",
+    "responses": [
+      {
+        "text": "I'm glad we were able to talk like this.  Come.  Let's move on together.",
+        "success": { "effect": "follow", "opinion": { "trust": 5, "value": 5 }, "topic": "TALK_ANTHRO_PET_BE_FELLOW" }
+      },
+      {
+        "text": "You're still my pet, don't forget that.  Come now, don't keep me waiting... pet.",
+        "success": { "effect": "follow", "opinion": { "fear": 5, "value": 5 }, "topic": "TALK_ANTHRO_PET_BADBOY" }
+      }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_PET_BE_FELLOW",
+    "type": "talk_topic",
+    "dynamic_line": "Yes, Master!",
+    "responses": [ { "text": "(End Talking)", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_ANTHRO_PET_BADBOY",
+    "type": "talk_topic",
+    "dynamic_line": "Yes, Master.",
+    "responses": [ { "text": "(End Talking)", "topic": "TALK_DONE" } ]
+  }
 ]

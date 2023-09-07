@@ -1,70 +1,42 @@
 [
-	{
-		"id": "TALK_ANTHRO_CUBI",
-		"type": "talk_topic",
-		"dynamic_line": "Wha--  What just happened?!  What the hell did you do?!",
-		"responses": [
-			{
-				"text": "I used human serum.",
-				"topic": "TALK_ANTHRO_CUBI_ITS_MY_TREAT"
-			},
-			{
-				"text": "Hold on, I need to think...",
-				"topic": "TALK_DONE"
-			}
-		]
-	},
-	{
-		"id": "TALK_ANTHRO_CUBI_ITS_MY_TREAT",
-		"type": "talk_topic",
-		"dynamic_line": "I don't quite get it, but I guess that means I'm a human now, huh.  It kinda sucks that I can't use my old powers though...  But I wonder if that's better than going crazy worrying whether you can find increasingly rare prey just like my brethren.",
-		"responses": [
-			{
-				"text": "I'm glad we were able to talk like this.  Come.  Let's move on together.",
-				"success": {
-					"effect": "follow",
-					"opinion": {
-						"trust": 5,
-						"value": 5
-					},
-					"topic": "TALK_ANTHRO_CUBI_BE_FELLOW"
-				}
-			},
-			{
-				"text": "You're still my pet, don't forget that.  Come now, don't keep me waiting... pet.",
-				"success": {
-					"effect": "follow",
-					"opinion": {
-						"anger": 5,
-						"fear": 5,
-						"trust": -5,
-						"value": 5
-					},
-					"topic": "TALK_ANTHRO_CUBI_BADBOY"
-				}
-			}
-		]
-	},
-	{
-		"id": "TALK_ANTHRO_CUBI_BE_FELLOW",
-		"type": "talk_topic",
-		"dynamic_line": "Yup, suuure～  It's you who made me like this after all, so you better take the responsibility, my dear mas-ter♪",
-		"responses": [
-			{
-				"text": "(End Talking)",
-				"topic": "TALK_DONE"
-			}
-		]
-	},
-	{
-		"id": "TALK_ANTHRO_CUBI_BADBOY",
-		"type": "talk_topic",
-		"dynamic_line": "Yeah, yeah.  Don't blame me if one day you get backstabbed with that attitude.",
-		"responses": [
-			{
-				"text": "(End Talking)",
-				"topic": "TALK_DONE"
-			}
-		]
-	}
+  {
+    "id": "TALK_ANTHRO_CUBI",
+    "type": "talk_topic",
+    "dynamic_line": "Wha--  What just happened?!  What the hell did you do?!",
+    "responses": [
+      { "text": "I used human serum.", "topic": "TALK_ANTHRO_CUBI_ITS_MY_TREAT" },
+      { "text": "Hold on, I need to think...", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_CUBI_ITS_MY_TREAT",
+    "type": "talk_topic",
+    "dynamic_line": "I don't quite get it, but I guess that means I'm a human now, huh.  It kinda sucks that I can't use my old powers though...  But I wonder if that's better than going crazy worrying whether you can find increasingly rare prey just like my brethren.",
+    "responses": [
+      {
+        "text": "I'm glad we were able to talk like this.  Come.  Let's move on together.",
+        "success": { "effect": "follow", "opinion": { "trust": 5, "value": 5 }, "topic": "TALK_ANTHRO_CUBI_BE_FELLOW" }
+      },
+      {
+        "text": "You're still my pet, don't forget that.  Come now, don't keep me waiting... pet.",
+        "success": {
+          "effect": "follow",
+          "opinion": { "anger": 5, "fear": 5, "trust": -5, "value": 5 },
+          "topic": "TALK_ANTHRO_CUBI_BADBOY"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_ANTHRO_CUBI_BE_FELLOW",
+    "type": "talk_topic",
+    "dynamic_line": "Yup, suuure～  It's you who made me like this after all, so you better take the responsibility, my dear mas-ter♪",
+    "responses": [ { "text": "(End Talking)", "topic": "TALK_DONE" } ]
+  },
+  {
+    "id": "TALK_ANTHRO_CUBI_BADBOY",
+    "type": "talk_topic",
+    "dynamic_line": "Yeah, yeah.  Don't blame me if one day you get backstabbed with that attitude.",
+    "responses": [ { "text": "(End Talking)", "topic": "TALK_DONE" } ]
+  }
 ]
