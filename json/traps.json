@@ -39,7 +39,7 @@
   },
   {
     "type": "trap",
-    "//": "魔法陣（ダメージ）",
+    "//": "trapfunc.cppに用意されてるけど使われてない（と思われる）処理。なんか面白そうなので、本体側で完全に没になるまでは使ってみる。",
     "id": "tr_magic_circle_drain",
     "name": "magic circle (green)",
     "color": "light_green",
@@ -47,7 +47,6 @@
     "visibility": 8,
     "avoidance": 10,
     "difficulty": 99,
-    "//": "trapfunc.cppに用意されてるけど使われてない（と思われる）処理。なんか面白そうなので、本体側で完全に没になるまでは使ってみる。",
     "action": "drain"
   }
 ]

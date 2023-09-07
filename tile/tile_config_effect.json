@@ -1,22 +1,18 @@
-{
-  "type": "mod_tileset",
-  "compatibility": [
-    "Custom Tileset",
-    "MshockXottoplus",
-    "MSX++DEAD_PEOPLE"
-  ],
-  "tile_info": [
-    { "height": 32, "width": 32 }
-  ],
-  "tiles-new": [
-    {
-      "file": "tile/hentai_effect.png",
-      "sprite_offset_y": -16,
-      "tiles": [
-        { "id": [ "overlay_effect_lust", "overlay_effect_corrupt" ], "fg": 1 },
-        { "id": [ "overlay_effect_dominate", "overlay_effect_movingdoing", "overlay_effect_gotwifed" ], "fg": 2 },
-        { "id": "overlay_effect_estrus", "fg": 3 }
-      ]
-    }
-  ]
-}
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [ "Custom Tileset", "MshockXottoplus", "MSX++DEAD_PEOPLE" ],
+    "tile_info": [ { "height": 32, "width": 32 } ],
+    "tiles-new": [
+      {
+        "file": "tile/hentai_effect.png",
+        "sprite_offset_y": -16,
+        "tiles": [
+          { "id": [ "overlay_effect_lust", "overlay_effect_corrupt" ], "fg": 1 },
+          { "id": [ "overlay_effect_dominate", "overlay_effect_movingdoing", "overlay_effect_gotwifed" ], "fg": 2 },
+          { "id": "overlay_effect_estrus", "fg": 3 }
+        ]
+      }
+    ]
+  }
+]

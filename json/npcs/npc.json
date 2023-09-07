@@ -71,9 +71,8 @@
     "faction": "your_followers"
   },
   {
-    "//": "↓こっから男の子ペットの定義。定義がめんどくさすぎて困る↓",
-    "type": "npc",
     "//": "ペット(犬)。人間に近い。",
+    "type": "npc",
     "id": "anthro_canine_morehuman_male",
     "name_unique": "Pet (Dog)",
     "class": "NC_ANTHRO_CANINE_MOREHUMAN_MALE",
@@ -189,9 +188,8 @@
     "mission_offered": "MISSION_ANTHRO_URSINE_1"
   },
   {
-    "//": "↓こっから女の子ペットの定義。女の子ペットって響きが、その...ちょっとHENTAI的。↓",
-    "type": "npc",
     "//": "ペット(犬)。人間に近い。",
+    "type": "npc",
     "id": "anthro_canine_morehuman_female",
     "name_unique": "Pet (Dog)",
     "class": "NC_ANTHRO_CANINE_MOREHUMAN_FEMALE",

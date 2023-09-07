@@ -1,6 +1,7 @@
-const fs = require('fs');
+const fs = require('fs')
 
-const path = "json/monsters/monsters.json"
+const path = process.argv[2]
+console.log(path)
 const base = fs.readFileSync(path)
 var json = JSON.parse(base)
 for(var j of json) {

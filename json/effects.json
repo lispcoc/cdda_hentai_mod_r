@@ -130,7 +130,7 @@
     "id": "pregnantcy",
     "apply_memorial_log": "Became pregnant.",
     "remove_memorial_log": "Gave birth to a baby.",
-    "//": "probably should be handled at lua in case abortion/stillbirth is added",
+    "//": "現実時間でだいたい30週=210日。1ヶ月=だいたい30日ごとでintensityを分ける。",
     "name": [
       "Pregnancy (3rd month)",
       "Pregnancy (4th month)",
@@ -145,7 +145,6 @@
     "max_intensity": 7,
     "apply_message": "You've become pregnant.",
     "rating": "mixed",
-    "//": "現実時間でだいたい30週=210日。1ヶ月=だいたい30日ごとでintensityを分ける。",
     "max_duration": 210,
     "int_dur_factor": 30,
     "int_decay_step": 0,
@@ -214,9 +213,8 @@
     "desc": [ "Chanting a spell.  If you're seeing this on yourself, it's a bug." ],
     "show_in_info": true,
     "max_intensity": 10,
-    "//": "*溜め*は最大で10段階。",
-    "int_dur_factor": 30,
     "//": "3分(30ターン)経過するごとに溜めの段階は下がっていく。魔法の詠唱は勢いが大事だと思うんです",
+    "int_dur_factor": 30,
     "rating": "neutral",
     "max_duration": 300,
     "base_mods": { "int_mod": [ 1 ], "speed_mod": [ -10 ] }

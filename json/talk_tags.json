@@ -29,9 +29,6 @@
     "type": "snippet",
     "category": "<fun_stuff_raw>",
     "text": [ "Aah, it's so much better like this..." ],
-    "//": "these rely on whether speaker was never pregnant before, I can't check that currently",
-    "//": "We might become parents with this, haha.",
-    "//": "I hope we'll sort this all out so our children can live in a better world.",
     "//": "You know, before this I really hated children. But now my instincts tell me what we're doing is for the better."
   },
   {
@@ -203,9 +200,6 @@
   },
   {
     "type": "snippet",
-    "//": "露骨なパロディネタはいちおう自粛。",
-    "//": "殺しは初めてじゃないんだよ、新米！",
-    "//": "何百回とやってきた！そうすれば変わるだろう！？",
     "//": "自分を制して、悪に徹しろ！",
     "category": "<cambion_target_engage>",
     "text": [

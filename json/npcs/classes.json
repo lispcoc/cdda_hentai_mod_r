@@ -169,9 +169,8 @@
     "traits": [ { "group": "trait_anthro_common_incubi" }, { "group": "trait_anthro_cubi_lesshuman" } ]
   },
   {
-    "//": "↓こっから男の子ペットの定義。↓",
-    "type": "npc_class",
     "//": "ペット(犬)。人間に近い。",
+    "type": "npc_class",
     "id": "NC_ANTHRO_CANINE_MOREHUMAN_MALE",
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
@@ -251,9 +250,8 @@
     "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_ursine_lesshuman" } ]
   },
   {
-    "//": "↓こっから女の子ペットの定義。↓",
-    "type": "npc_class",
     "//": "ペット(犬)。人間に近い。",
+    "type": "npc_class",
     "id": "NC_ANTHRO_CANINE_MOREHUMAN_FEMALE",
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
