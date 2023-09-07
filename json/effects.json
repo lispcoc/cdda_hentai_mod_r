@@ -10,7 +10,7 @@
     "max_intensity": 100,
     "int_dur_factor": 1,
     "max_duration": 100,
-    "miss_message": [ [ "You really want to rub one out...", 5 ], [ "You are desperately enduring the urge to climax...", 5 ] ],
+    "miss_messages": [ [ "You really want to rub one out...", 5 ], [ "You are desperately enduring the urge to climax...", 5 ] ],
     "base_mods": { "stamina_min": [ -0.1 ] },
     "scaling_mods": { "stamina_min": [ -0.1 ] }
   },
@@ -30,7 +30,7 @@
     "max_intensity": 6,
     "apply_message": "You're starting to feel aroused.",
     "remove_message": "Your carnal desires are gone.",
-    "miss_message": [ [ "Your lust overwhelms your senses...", 10 ] ],
+    "miss_messages": [ [ "Your lust overwhelms your senses...", 10 ] ],
     "rating": "bad",
     "int_dur_factor": 600,
     "max_duration": 7200,

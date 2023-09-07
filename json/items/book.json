@@ -2,8 +2,7 @@
   {
     "id": "recipe_hentai",
     "type": "BOOK",
-    "name": "lab journal-Desire",
-    "name_plural": "lab journals-Desire",
+    "name": { "str": "lab journal-Desire", "str_pl": "lab journals-Desire" },
     "description": "A study journal written in a strange mishmash of Japanese and English languages.  It begins with a description of the research results of XE037 and its useful methods of utilization, concluding with the birth rate graphs in the United States.  It's stamped \"DENIED\" three times...",
     "weight": 50,
     "volume": 2,
@@ -21,8 +20,7 @@
   {
     "id": "dictionnaire_finfernal",
     "type": "BOOK",
-    "name": "Dictionnaire Infernal",
-    "name_plural": "Dictionnaire Infernal",
+    "name": { "str": "Dictionnaire Infernal", "str_pl": "Dictionnaire Infernal" },
     "description": "Written by Jacques Auguste Simon Collin de Plancy, this book describes a wide array of worldly beliefs and folklore such demonology, superstitions, divinations and notable people.",
     "weight": 368,
     "volume": 3,

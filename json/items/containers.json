@@ -1,28 +1,31 @@
 [
   {
     "id": "used_condom",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "other",
-    "name": "used condom",
-    "name_plural": "used condoms",
+    "name": { "str": "used condom", "str_pl": "used condoms" },
     "description": "Used contraceptive device, with some liquid still inside. It's just a rubbish now.",
-    "weight": 1,
-    "volume": 0,
-    "bashing": 1,
-    "cutting": 0,
+    "weight": "5 g",
+    "volume": "15 ml",
     "to_hit": -3,
     "price": 100,
-    "rigid": false,
     "material": [ "plastic" ],
     "symbol": ",",
     "color": "pink",
-    "contains": 1,
-    "seals": true,
-    "watertight": true
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "7 kg",
+        "max_item_length": "26 cm"
+      }
+    ],
+    "melee_damage": { "bash": 1, "cut": 0 }
   },
   {
     "id": "medieval_bottle",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "other",
     "name": "vial (250ml)",
     "description": "An old-fashioned vial tightly sealed with a cork.  Can hold 250ml.",
@@ -30,13 +33,11 @@
     "volume": 1,
     "price": 400,
     "to_hit": 1,
-    "bashing": 3,
     "material": "glass",
     "symbol": ")",
     "color": "light_cyan",
     "contains": 1,
-    "seals": true,
-    "watertight": true,
-    "qualities": [ [ "BOIL", 1 ] ]
+    "qualities": [ [ "BOIL", 1 ] ],
+    "melee_damage": { "bash": 3 }
   }
 ]

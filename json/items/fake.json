@@ -38,7 +38,7 @@
       "power": 30,
       "distance_factor": 0.1,
       "fire": false,
-      "shrapnel": { "count": 1, "mass": 3, "recovery": 100, "drop": "d_cum" }
+      "shrapnel": { "casing_mass": 3, "recovery": 100, "drop": "d_cum" }
     }
   },
   {

@@ -2,8 +2,7 @@
   {
     "id": "h_semen",
     "type": "COMESTIBLE",
-    "name": "human bodily fluid",
-    "name_plural": "human bodily fluids",
+    "name": { "str": "human bodily fluid", "str_pl": "human bodily fluids" },
     "weight": 28,
     "color": "white",
     "spoils_in": 8,
@@ -25,8 +24,7 @@
   {
     "id": "d_cum",
     "type": "COMESTIBLE",
-    "name": "demonic bodily fluid",
-    "name_plural": "demonic bodily fluids",
+    "name": { "str": "demonic bodily fluid", "str_pl": "demonic bodily fluids" },
     "weight": 28,
     "color": "pink",
     "spoils_in": 8,
@@ -44,7 +42,7 @@
     "fun": -50,
     "freezing_point": -9999,
     "vitamins": [ [ "calcium", 6 ], [ "iron", 6 ], [ "vitC", 6 ], [ "vitB", 6 ] ],
-    "use_action": { "type": "mutagen", "is_weak": true }
+    "//use_action": { "type": "mutagen", "is_weak": true }
   },
   {
     "id": "oc_pill",
@@ -66,7 +64,7 @@
       "activation_message": "You take the birth control pill.",
       "effects": [ { "id": "contraception", "duration": 14400 } ]
     },
-    "flags": "NPC_SAFE"
+    "flags": [ "NPC_SAFE" ]
   },
   {
     "id": "after_pill",
@@ -88,67 +86,45 @@
       "activation_message": "You take the morning-after pill.",
       "effects": [ { "id": "anthcream", "duration": 1 } ]
     },
-    "flags": "NPC_SAFE"
-  },
-  {
-    "id": "ts_elixir",
-    "type": "COMESTIBLE",
-    "comestible_type": "MED",
-    "name": "gender bender elixir",
-    "name_plural": "gender bender elixirs",
-    "description": "Whoever drinks it will change their gender.",
-    "weight": 240,
-    "volume": 1,
-    "container": "medieval_bottle",
-    "price": 10000,
-    "charges": 1,
-    "symbol": "~",
-    "color": "pink",
-    "use_action": "IUSE_TS_ELIXIR",
-    "phase": "liquid",
-    "flags": "TRADER_AVOID"
+    "flags": [ "NPC_SAFE" ]
   },
   {
     "id": "mutagen_human",
     "copy-from": "mutagen_flavor",
     "type": "COMESTIBLE",
-    "name": "human mutagen",
-    "name_plural": "human mutagens",
+    "name": { "str": "human mutagen", "str_pl": "human mutagens" },
     "description": "A rare substance of uncertain origins.  Causes you to mutate into human...  In other words, it will revert any inhuman mutations or genetic abnormalities.",
     "price": 600000,
     "healthy": 5,
     "addiction_potential": 8,
-    "use_action": "PURIFIER"
+    "//use_action": "PURIFIER"
   },
   {
     "id": "iv_mutagen_human",
     "copy-from": "iv_mutagen_flavor",
     "type": "COMESTIBLE",
-    "name": "human serum",
-    "name_plural": "human serum",
+    "name": { "str": "human serum", "str_pl": "human serum" },
     "description": "A super-concentrated mutagen.  You need a syringe to inject it...  Depending on how you use it, you may be able to *mutate* non-human organisms into humans.",
     "price": 900000,
     "color": "magenta",
     "addiction_potential": 8,
-    "use_action": [ "PURIFY_IV", "IUSE_ANTHROPOMORPH" ]
+    "//use_action": [ "PURIFY_IV", "IUSE_ANTHROPOMORPH" ]
   },
   {
     "id": "mutagen_fiend",
     "copy-from": "mutagen_flavor",
     "type": "COMESTIBLE",
-    "name": "demonic mutagen",
-    "name_plural": "demonic mutagens",
+    "name": { "str": "demonic mutagen", "str_pl": "demonic mutagens" },
     "description": "A rare substance of uncertain origins.  Causes you to mutate.",
-    "use_action": { "type": "mutagen", "mutation_category": "FIEND" }
+    "//use_action": { "type": "mutagen", "mutation_category": "FIEND" }
   },
   {
     "id": "iv_mutagen_fiend",
     "copy-from": "iv_mutagen_flavor",
     "type": "COMESTIBLE",
-    "name": "demonic serum",
-    "name_plural": "demonic serum",
+    "name": { "str": "demonic serum", "str_pl": "demonic serum" },
     "description": "A super-concentrated mutagen strongly resembling blood.  You need a syringe to inject it...  if you really want to?",
     "color": "red",
-    "use_action": { "type": "mutagen_iv", "mutation_category": "FIEND" }
+    "//use_action": { "type": "mutagen_iv", "mutation_category": "FIEND" }
   }
 ]

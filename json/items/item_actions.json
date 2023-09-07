@@ -11,11 +11,6 @@
   },
   {
     "type": "item_action",
-    "id": "IUSE_TS_ELIXIR",
-    "name": "Drink"
-  },
-  {
-    "type": "item_action",
     "id": "IUSE_NAMING_NPC",
     "name": "Use"
   },

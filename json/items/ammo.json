@@ -14,7 +14,7 @@
     "stack_size": 7,
     "ammo_type": "flintlock",
     "range": 6,
-    "damage": 50,
+    "damage": { "damage_type": "stab", "amount": 50 },
     "dispersion": 90,
     "recoil": 1500,
     "loudness": 70,

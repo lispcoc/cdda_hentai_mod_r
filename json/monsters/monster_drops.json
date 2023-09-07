@@ -90,7 +90,7 @@
     "type": "item_group",
     "subtype": "collection",
     "id": "default_cubi_rare_item",
-    "entries": [ { "item": "ts_elixir" }, { "item": "holy_choker" } ]
+    "entries": [ { "item": "holy_choker" } ]
   },
   {
     "type": "item_group",
