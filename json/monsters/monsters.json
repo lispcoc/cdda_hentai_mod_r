@@ -28,30 +28,6 @@
     "vision_night": 10,
     "harvest": "human",
     "starting_ammo": { "reloaded_22_lr": 50, "reloaded_22_fmj": 50 },
-    "special_attacks": [
-      [ "WIFE_U", 0 ],
-      [ "STRIP_U", 5 ],
-      [ "PARROT", 75 ],
-      [ "VULGAR_SPEECH", 25 ],
-      {
-        "type": "gun",
-        "cooldown": 7,
-        "move_cost": 200,
-        "targeting_cost": 100,
-        "gun_type": "rifle_22",
-        "ammo_type": "reloaded_22_lr",
-        "max_ammo": 22,
-        "fake_skills": [ [ "gun", 1 ], [ "rifle", 1 ] ],
-        "fake_dex": 6,
-        "fake_per": 5,
-        "require_targeting_player": true,
-        "targeting_sound": "\"Die, asshole!\"",
-        "targeting_volume": 10,
-        "description": "Bang!",
-        "no_ammo_sound": "\"Out of ammo! OUT OF AMMO?! God fuckin' dammit!\"",
-        "ranges": [ [ 0, 13, "DEFAULT" ] ]
-      }
-    ],
     "death_drops": "default_cambion_male_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -108,7 +84,6 @@
     "vision_day": 30,
     "vision_night": 20,
     "harvest": "human",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 3 ], [ "STRIP_U", 5 ] ],
     "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
@@ -154,7 +129,6 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 2 ], [ "STRIP_U", 3 ], [ "THROW_KISS", 10 ] ],
     "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
@@ -229,23 +203,6 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
-    "special_attacks": [
-      [ "WIFE_U", 0 ],
-      [ "STRIP_U", 10 ],
-      [ "TAZER", 20 ],
-      {
-        "type": "gun",
-        "cooldown": 5,
-        "move_cost": 100,
-        "gun_type": "fake_whip",
-        "fake_skills": [ [ "gun", 8 ], [ "rifle", 8 ] ],
-        "fake_dex": 8,
-        "fake_per": 8,
-        "require_targeting_player": false,
-        "description": "%1$s cracks a whip!",
-        "ranges": [ [ 1, 3, "DEFAULT" ] ]
-      }
-    ],
     "death_drops": "succubi_sadist_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -267,7 +224,7 @@
   {
     "id": "mon_succubi_somnophilia",
     "type": "MONSTER",
-    "//": "ソムノフィリア：眠っていたり意識の無い状態の相手との行為を好む。",
+    "//": "魔法職。近接攻撃は一切行わず眠らせることに特化。",
     "name": "sleepcubus",
     "name_plural": "sleepcubi",
     "description": "A demon who seeks to corrupt men through sexual activity, a succubus.  Although it is said that they absorb men's life force via lewd dreams, it appears that this one prefers that kind of situation the most.",
@@ -283,7 +240,6 @@
     "color": "blue_red",
     "aggression": 95,
     "morale": 80,
-    "//": "魔法職。近接攻撃は一切行わず眠らせることに特化。",
     "melee_skill": 4,
     "melee_dice": 0,
     "melee_dice_sides": 1,
@@ -295,7 +251,6 @@
     "vision_day": 30,
     "vision_night": 40,
     "harvest": "human",
-    "special_attacks": [ [ "SEDUCE", 7 ], [ "MAGIC_SUCCUBI_SOMNO", 3 ], [ "STRIP_U", 7 ], [ "WIFE_U", 0 ] ],
     "death_drops": "arch_succubi_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -339,7 +294,6 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
-    "special_attacks": [ [ "SEDUCE", 5 ], [ "EXPOSE", 30 ], [ "WIFE_U", 0 ] ],
     "death_drops": "arch_succubi_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -361,7 +315,7 @@
   {
     "id": "mon_succubi_lactophilia",
     "type": "MONSTER",
-    "//": "ラクトフィリア：母乳。",
+    "//": "戦闘能力は普通のサキュバスとさほど変わらないが、超実力主義である夢魔達の中で*超*豊満な胸を持っているという理由だけでArchの座に祭り上げられてしまったが本人はよくわかっていない天然系おっとりMILFタイプ。　　まで妄想した",
     "name": "milkcubus",
     "name_plural": "milkcubi",
     "description": "A demon who seeks to corrupt men through sexual activity, a succubus.  Her breasts are spectacularly massive even for a succubus, and the tip always seems to drip with her own milk.",
@@ -377,7 +331,6 @@
     "color": "pink_white",
     "aggression": 50,
     "morale": 80,
-    "//": "戦闘能力は普通のサキュバスとさほど変わらないが、超実力主義である夢魔達の中で*超*豊満な胸を持っているという理由だけでArchの座に祭り上げられてしまったが本人はよくわかっていない天然系おっとりMILFタイプ。　　まで妄想した",
     "melee_skill": 3,
     "melee_dice": 1,
     "melee_dice_sides": 3,
@@ -389,7 +342,6 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 2 ], [ "STRIP_U", 3 ], [ "THROW_KISS", 7 ] ],
     "death_drops": "arch_succubi_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -435,7 +387,6 @@
     "vision_day": 30,
     "vision_night": 40,
     "harvest": "human",
-    "special_attacks": [ [ "SEDUCE", 5 ], [ "STRIP_U", 2 ], [ "WIFE_U", 0 ], [ "LOVE_FLAME", 40 ], [ "UPGRADE", 20 ] ],
     "death_drops": "greater_succubi_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -512,7 +463,6 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
-    "special_attacks": [ [ "SEDUCE", 5 ], [ "STRIP_U", 3 ], [ "FLESH_GOLEM", 15 ], [ "GRAB_DRAG", 10 ], [ "WIFE_U", 0 ] ],
     "death_drops": "arch_incubi_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -561,30 +511,6 @@
     "vision_night": 30,
     "harvest": "human",
     "starting_ammo": { "d_cumshot": 20 },
-    "special_attacks": [
-      [ "SEDUCE", 5 ],
-      [ "THROW_KISS", 15 ],
-      [ "STRIP_U", 7 ],
-      [ "WIFE_U", 0 ],
-      [ "TAZER", 10 ],
-      {
-        "type": "gun",
-        "cooldown": 20,
-        "move_cost": 500,
-        "targeting_cost": 100,
-        "gun_type": "m79",
-        "ammo_type": "d_cumshot",
-        "max_ammo": 2,
-        "fake_skills": [ [ "gun", 0 ], [ "launcher", 2 ] ],
-        "fake_dex": 8,
-        "fake_per": 8,
-        "require_targeting_player": true,
-        "targeting_sound": "\"Hnggg... cum, cum, CUM!\"",
-        "targeting_volume": 6,
-        "description": "Kablooey!",
-        "ranges": [ [ 5, 25, "DEFAULT" ] ]
-      }
-    ],
     "death_drops": "arch_incubi_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -637,50 +563,6 @@
     "vision_night": 30,
     "harvest": "human",
     "starting_ammo": { "flintlock_ammo": 24, "flintlock_ammo_magic": 6 },
-    "special_attacks": [
-      [ "WIFE_U", 0 ],
-      [ "SEDUCE", 2 ],
-      [ "STRIP_U", 3 ],
-      [ "THROW_KISS", 10 ],
-      {
-        "type": "gun",
-        "cooldown": 5,
-        "move_cost": 1200,
-        "targeting_cost": 250,
-        "gun_type": "rifle_flintlock",
-        "ammo_type": "flintlock_ammo_magic",
-        "max_ammo": 6,
-        "fake_skills": [ [ "gun", 4 ], [ "rifle", 4 ] ],
-        "fake_dex": 8,
-        "fake_per": 12,
-        "require_targeting_player": true,
-        "//": "ウェーバーの「魔弾の射手」の一説から適当に抜き出し。「6発は必中、7発目は...」という意味。まあドイツ語はさっぱりだがな！",
-        "targeting_sound": "\"Sechse treffen, sieben...\"",
-        "targeting_volume": 30,
-        "description": "Blam!",
-        "no_ammo_sound": "Click!",
-        "ranges": [ [ 2, 12, "DEFAULT" ] ]
-      },
-      {
-        "type": "gun",
-        "cooldown": 2,
-        "move_cost": 1200,
-        "targeting_cost": 250,
-        "gun_type": "rifle_flintlock",
-        "ammo_type": "flintlock_ammo",
-        "max_ammo": 24,
-        "fake_skills": [ [ "gun", 2 ], [ "rifle", 2 ] ],
-        "fake_dex": 6,
-        "fake_per": 8,
-        "require_targeting_player": true,
-        "//": "ウェーバーの「魔弾の射手」の一説から適当に抜き出し。「ダイヤのクイーンの名にかけて撃て！は、は！」という意味。まあドイツ語はさっぱりだがな！",
-        "targeting_sound": "\"Schiess in schellobers Namen! Ha, ha!\"",
-        "targeting_volume": 40,
-        "description": "Blam!",
-        "no_ammo_sound": "Click!",
-        "ranges": [ [ 2, 12, "DEFAULT" ] ]
-      }
-    ],
     "death_drops": "incubi_hoplophilia_death_drops",
     "death_function": [ "NORMAL" ],
     "flags": [
@@ -727,7 +609,6 @@
     "weight": 49928,
     "symbol": "@",
     "color": "pink",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 3 ], [ "STRIP_U", 0 ] ],
     "flags": [
       "SEES",
       "HEARS",
@@ -757,7 +638,6 @@
     "weight": 55794,
     "symbol": "@",
     "color": "pink",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 1 ], [ "STRIP_U", 1 ], [ "THROW_KISS", 8 ] ],
     "flags": [
       "SEES",
       "HEARS",
@@ -787,7 +667,6 @@
     "weight": 62850,
     "symbol": "@",
     "color": "cyan",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 3 ], [ "STRIP_U", 0 ] ],
     "flags": [
       "SEES",
       "HEARS",
@@ -817,7 +696,6 @@
     "weight": 66536,
     "symbol": "@",
     "color": "cyan",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "SEDUCE", 1 ], [ "STRIP_U", 1 ], [ "THROW_KISS", 10 ] ],
     "flags": [
       "SEES",
       "HEARS",
@@ -862,7 +740,6 @@
     "dodge": 3,
     "vision_night": 30,
     "harvest": "human",
-    "special_attacks": [ [ "EVENT_GOATHEAD_DEMON", 1 ], [ "MAGIC_GOATHEAD_DEMON", 5 ], [ "FEAR_PARALYZE", 30 ] ],
     "death_function": [ "DISINTEGRATE" ],
     "flags": [
       "IMMOBILE",
@@ -890,8 +767,7 @@
     "species": [ "PLANT", "HERM" ],
     "speed": 50,
     "material": [ "veggy" ],
-    "color": "light_green",
-    "special_attacks": [ [ "WIFE_U", 0 ], [ "STRIP_U", 0 ], [ "RANGED_PULL", 4 ], [ "SPIT_SAP", 3 ], [ "TENTACLE", 15 ] ]
+    "color": "light_green"
   },
   {
     "//": "↓ここからは未実装のモンスター。↓",
@@ -958,7 +834,6 @@
     "name": "corrupted schoolgirl",
     "name_plural": "corrupted schoolgirls",
     "description": "A wretched shadow of what could have been a survivor, poor innocent girl whose body and soul were stolen by Demons as she got engulfed by the devilish temptation.  Any traces of her humanity are long gone at this point, as she's driven solely by her carnal desires.",
-    "special_attacks": [ [ "EVENT_DEMONBEING_SCHOOLGIRL", 3 ] ],
     "flags": [ "IMMOBILE" ]
   }
 ]
