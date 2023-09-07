@@ -1,0 +1,254 @@
+[
+    {
+        "type" : "snippet",
+        "category" : "<fun_stuff_accept>",
+        "text" : [
+            "Of course!",
+			"With pleasure!",
+			"Gladly!",
+			"Yup, I'm down!",
+			"Sure, let's do this!",
+			"I was just about to say it myself!"
+        ]
+    },{
+		"//" : "for non-follower non-friends",
+        "type" : "snippet",
+        "category" : "<fun_stuff_accept_wanderer>",
+        "text" : [
+            "Well, don't mind if I do.",
+			"Sure, if you're offering.",
+			"I guess I can spare an hour or so.",
+			"Never thought I'd ever find someone so eager like you. Let's do this.",
+			"Even Cataclysm can't change your ways, huh? Okay then.",
+			"No strings attached? Great.",
+			"This is really crazy, but aren't we all?"
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_raw>",
+        "text" : [
+            "Aah, it's so much better like this..."
+        ],
+		"//" : "these rely on whether speaker was never pregnant before, I can't check that currently",
+		"//" : "We might become parents with this, haha.",
+		"//" : "I hope we'll sort this all out so our children can live in a better world.",
+		"//" : "You know, before this I really hated children. But now my instincts tell me what we're doing is for the better."
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_partner_fvirgin>",
+        "text" : [
+            "Sure, but... uh, I never did this before.",
+			"I'm a virgin though, so... please be gentle with me.",
+			"I'm so nervous... Can you hold me?",
+			"Ah...! No, I'm fine, keep going...",
+			"It's my first time... I hope I'll do well.",
+			"Umm... It's my first... Will that be okay...?"
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_partner_mvirgin>",
+        "text" : [
+            "D-Don't laugh! It doesn't matter if I did this before or not, right?!",
+			"Damn, I just hope it won't be too awkward.",
+			"Yeah, I need to do this at least once before I die.",
+			"It's... my first time, so... Sorry if... I'm not very good..."
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_player_fvirgin>",
+        "text" : [
+            "Don't worry, I'll be gentle.",
+            "It's okay, it only hurts first time.",
+			"It might hurt a bit, but you'll be fine.",
+			"You'll get used to it in no time."
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_player_mvirgin>",
+        "text" : [
+            "You know where to put it, right? Here, I'll help you out.",
+            "What's wrong? You don't know what to do? Don't worry, I got it from here.",
+			"It's okay, just let your instincts guide you.",
+			"You'll become a fine man after this.",
+			"Don't worry, I'll take the lead."
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_shy>",
+        "text" : [
+            "S-Stupid! What are you saying out of the blue...? It's not like I'm against it or anything though...",
+			"Sure... Um... Quit staring and just do it...",
+			"Haah... Okay, make it quick.",
+			"J-Just hurry up already, <okay>?",
+			"I can't believe I'm doing this..."
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_fear>",
+        "text" : [
+            "Hii... Please, just don't hurt me...",
+			"I'll do whatever you want...!",
+			"If that's what you're after... Fine, but don't hurt me, please!",
+			"Okay... Okay, calm down! Suit yourself... I just want to get out of this alive.",
+			"I'd hate to be raped... But I don't want to die either... Haah...",
+			"You're sick, you know that?! I hope it'll come back to bite you one day.",
+			"No, nooo! Why... Why?! Why is this happening to me...",
+			"This is inevitable, isn't it... Nothing is sacred after all...",
+			"I'll do it, okay?! Just don't hurt me...",
+			"Whatever you want, just please, have mercy...!",
+			"Yes... I suppose I don't have a choice."
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_refuse>",
+        "text" : [
+            "With you? Uh, thanks but no thanks.",
+			"Are you sure we should be wasting our time like this?",
+			"Please spare me that.",
+			"That's a really inappropriate timing.",
+			"Shouldn't we worry about something more important?",
+			"Why would I? Do you think I'm so easy?",
+			"This is ridiculous.",
+			"Not happening.",
+			"Sorry, I'm not in the mood right now.",
+			"Desperate, are we?",
+			"No, we can't."
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_refuse_rough>",
+        "text" : [
+            "Are you crazy?! I'm more worried about survival, not this!",
+			"What the fuck?! Fuck off you <name_b>!",
+			"How about you go fuck yourself?",
+			"Go hump a tree you bugger.",
+			"Shut the fuck up!",
+			"Leave me alone!",
+			"Creeps have not gone extinct yet? Darn.",
+			"Why don't you ask a zombie instead? I'm sure they'd love that.",
+			"I should probably off a <name_b> like you on the spot to make this world a better place.",
+			"Seek help you sad <name_b>.",
+			"Keep dreaming sweetie.",
+			"Sorry, not this lifetime.",
+			"What the fuck is wrong with you?"
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<fun_stuff_love>",
+        "text" : [
+            "Haa... Please, stay with me...",
+			"I love you...",
+			"I wish we could stay together like this...",
+			"No one will stop us together...",
+			"I'm so <happy> it's with you...",
+			"I don't want to lose you..."
+        ]
+    },{
+		"//" : "for non-followers non-friend partners",
+        "type" : "snippet",
+        "category" : "<fun_stuff_bye>",
+        "text" : [
+            "Well, that was fun, but I gotta go.",
+			"Thanks, that was refreshing. See ya.",
+			"That was not bad at all. Bye.",
+			"I'll be on my way now.",
+			"Just what I needed. It's time for me to go though.",
+			"Sweet. I'll take my leave now."
+        ]
+    },{
+		"//" : "for non-followers non-friend partners",
+        "type" : "snippet",
+        "category" : "<fun_stuff_bye_fear>",
+        "text" : [
+            "*Whimpers*",
+			"*Cries*",
+			"Why... Why...",
+			"I didn't want this...",
+			"Why me... Why me..."
+        ]
+    },{
+		"//" : "act was interrupted",
+        "type" : "snippet",
+        "category" : "<fun_stuff_interrupt>",
+        "text" : [
+            "Hey!",
+			"Done already?",
+			"I'm not finished yet!",
+			"What's wrong?",
+			"Why did you stop?"
+        ]
+    },
+	{
+		"//": "keep these below until one day monsters can utilize snippets",
+        "type" : "snippet",
+        "category" : "<cambion_target_acquired>",
+        "text" : [
+            "Bah!",
+			"Aa-haaa!",
+			"What the--?!",
+			"Hey, it's the enemy!",
+			"We have contact!",
+			"Hostiles!",
+			"Ha! I see ya!",
+			"Hyahaaa!",
+			"I'm gonna twist your head off and make it my toy!",
+			"Hyahaaa! Fresh toy!",
+			"Hyahaaa! Fresh meat!",
+			"We're gonna feast on human flesh today!",
+			"It's raaaape tiiiiiime!",
+			"(Insane laughter)",
+			"HELL YEAH!",
+			"Give 'em hell!"
+        ]
+    },{
+        "type" : "snippet",
+		"//": "露骨なパロディネタはいちおう自粛。",
+		"//": "殺しは初めてじゃないんだよ、新米！",
+		"//": "何百回とやってきた！そうすれば変わるだろう！？",
+		"//": "自分を制して、悪に徹しろ！",
+        "category" : "<cambion_target_engage>",
+        "text" : [
+            "Hyahaaa!",
+			"Scared, huh?!",
+			"Come at me, <name_b>!",
+			"Blood! Blood! Blooooooooood!!!",
+			"Bleed for meeee!",
+			"You're nothiiiiiiiiiiiiiiiiiiiin'!",
+			"You got nothin' on me!",
+			"Rape and then kill? Or kill and then rape?  ...Both sound reaaaaaaaally nice!",
+			"I'll rape you, then kill you, and then rape you again!",
+			"Murder die kill!",
+			"I don't mind helpin' you out, you know?  ...After I'm done toyin' with ya, that is!",
+			"(Insane laughter)",
+			"(Roars)",
+			"(Howls)",
+			"(Growls)",
+			"Dieeeeeeeeeeeee!",
+			"Imma fuck you up!",
+			"I just want to play! You don't mind it, right?!",
+			"You little shit...",
+			"How are you still not dead?!",
+			"Why can't you just die?!",
+			"This ain't my first time killin', ya rookie!",
+			"If I can't live as a Human, then Demon life it is!",
+			"When you get to hell, tell 'em I sent ya!",
+			"When I kill you, I'll rape your corpse! Don't worry, I'll be gentle!",
+			"You're gonna be really fuckin' sorry!"
+        ]
+    },{
+        "type" : "snippet",
+        "category" : "<cambion_target_lost>",
+        "text" : [
+            "(Clicks tongue)",
+			"That fella sure runs fast...",
+			"That <name_b> is hella fast, <swear>!",
+			"Come out, come out, wherever you are! I'm gonna end ya quick!",
+			"Stop hidin' and come out already!",
+			"Careful, that <name_b> is still hidin' nearby...",
+			"Stop runnin'!",
+			"Damn, where the fuck did he go?!",
+			"I see ya! No I don't... Yes I do! No I don't... Fuck!",
+			"Chicken, chicken, chicken... Chicken!"
+        ]
+    }
+]

@@ -1,0 +1,87 @@
+{
+	"type": "mod_tileset",
+	"compatibility": [ "Custom Tileset", "MshockXottoplus", "MSX++DEAD_PEOPLE" ],
+	"tile_info": [
+		{
+			"height": 32,
+			"width": 32
+		}
+	],
+	"tiles-new": [
+		{
+			"file": "tile/hentai_monster.png",
+			"tiles": [
+				{
+					"id": "mon_lessor_succubi",
+					"fg": 1,
+					"rotates": false
+				},
+				{
+					"id": "mon_succubi",
+					"fg": 2,
+					"rotates": false
+				},
+				{
+					"id": "mon_greater_succubi",
+					"fg": 3,
+					"rotates": false
+				},
+				{
+					"id": "mon_succubi_sadist",
+					"fg": 4,
+					"rotates": false
+				},
+				{
+					"id": "mon_succubi_somnophilia",
+					"fg": 5,
+					"rotates": false
+				},
+				{
+					"id": "mon_succubi_exhibitionism",
+					"fg": 6,
+					"rotates": false
+				},
+				{
+					"id": "mon_succubi_lactophilia",
+					"fg": 7,
+					"rotates": false
+				},
+				{
+					"id": "mon_corrupted_schoolgirl",
+					"fg": 8,
+					"rotates": false
+				},
+				{
+					"id": "mon_corrupted_schoolteacher_female",
+					"fg": 9,
+					"rotates": false
+				},
+				{
+					"id": "mon_lessor_incubi",
+					"fg": 16,
+					"rotates": false
+				},
+				{
+					"id": "mon_incubi",
+					"fg": 17,
+					"rotates": false
+				},
+				{
+					"id": "mon_greater_incubi",
+					"fg": 18,
+					"rotates": false
+				},
+				{
+					"id": "mon_incubi_phalloplas",
+					"fg": 19,
+					"rotates": false
+				},
+				{
+					"id": "mon_incubi_hoplophilia",
+					"fg": 20,
+					"rotates": false
+				}
+			]
+		}
+	]
+}

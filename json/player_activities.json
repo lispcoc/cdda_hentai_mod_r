@@ -1,0 +1,9 @@
+[
+	{
+		"id": "ACT_SEX",
+		"type": "activity_type",
+		"stop_phrase": "Stop *having fun*?",
+		"suspendable": false,
+		"based_on": "speed"
+	}
+]

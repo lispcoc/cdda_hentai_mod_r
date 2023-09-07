@@ -1,0 +1,27 @@
+[
+	{
+		"type" : "SPECIES",
+		"id" : "FIEND"
+	},
+	{
+		"type" : "SPECIES",
+		"id" : "CUBI",
+		"anger_triggers" : ["FIRE", "FRIEND_ATTACKED"],
+		"fear_triggers" : ["HURT", "FRIEND_DIED"],
+		"placate_triggers": [ "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ]
+	},
+
+	{
+		"//": "ここから下はモンスターの性別を擬似的に設定するためのspecies。",
+		"type": "SPECIES",
+		"id": "MALE"
+	},
+	{
+		"type": "SPECIES",
+		"id": "FEMALE"
+	},
+	{
+		"type": "SPECIES",
+		"id": "HERM"
+	}
+]
