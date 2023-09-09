@@ -114,11 +114,12 @@
     "type": "talk_topic",
     "dynamic_line": [
       {
-        "u_male": [
+        "u_male": true,
+        "yes": [
           "Okay...  But be careful.  The men were all caught by the succubi and turned into demons...",
           "Okay...  But be careful.  It seems like those incubi don't care even if you're a man..."
         ],
-        "u_female": [
+        "no": [
           "Okay...  But be careful.  The women were all caught by the incubi and turned into demons...",
           "Okay...  But be careful.  The women were all caught by the incubi and got raped relentlessly...  It looked worse than just dying...",
           "Okay...  But be careful.  It seems like those succubi don't care even if you're a woman..."

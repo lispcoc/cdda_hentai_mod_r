@@ -196,7 +196,7 @@
       { "item": "blazer", "damage": [ 2, 4 ] },
       { "item": "pants", "prob": 75, "damage": [ 3, 4 ] },
       { "item": "dress_shoes", "prob": 80 },
-      { "item": "skinny_tie", "prob": 50, "damage": [ 1, 4 ] },
+      { "item": "tights", "prob": 50, "damage": [ 1, 4 ] },
       { "item": "tieclip", "prob": 10 }
     ]
   },
@@ -209,7 +209,7 @@
       { "item": "skirt", "damage": [ 1, 4 ] },
       { "group": "female_underwear_top", "prob": 50, "damage": [ 3, 4 ] },
       { "group": "female_underwear_bottom", "prob": 50, "damage": [ 3, 4 ] },
-      { "item": "skinny_tie", "damage": [ 1, 4 ] },
+      { "item": "tights", "damage": [ 1, 4 ] },
       { "item": "socks", "prob": 80 },
       { "item": "sneakers", "prob": 80 }
     ]

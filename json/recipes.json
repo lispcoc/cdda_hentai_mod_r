@@ -14,7 +14,7 @@
     "components": [
       [ [ "mutagen", 1 ] ],
       [ [ "human_flesh", 3 ], [ "blood", 5 ], [ "h_semen", 5 ] ],
-      [ [ "ammonia", 1 ], [ "lye_powder", 100 ] ]
+      [ [ "ammonia_liquid", 1 ], [ "lye_powder", 100 ] ]
     ]
   },
   {
@@ -46,7 +46,7 @@
     "components": [
       [ [ "mutagen", 1 ] ],
       [ [ "human_flesh", 3 ], [ "blood", 5 ], [ "d_cum", 5 ] ],
-      [ [ "ammonia", 1 ], [ "lye_powder", 100 ] ]
+      [ [ "ammonia_liquid", 1 ], [ "lye_powder", 100 ] ]
     ]
   },
   {

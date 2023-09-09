@@ -4,7 +4,7 @@
     "ident": "magic",
     "name": "Magic",
     "density": 0,
-    "resist": { "bash": 999, "cut": 999, "acid": 10 },
+    "resist": { "bash": 999, "cut": 999, "acid": 10, "bullet": 0, "heat": 0 },
     "chip_resist": 999,
     "dmg_adj": [ "fading", "glittering", "dim", "dissipating" ],
     "bash_dmg_verb": "fading",

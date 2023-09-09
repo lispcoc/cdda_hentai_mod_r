@@ -9,7 +9,7 @@
       { "item": "jersey", "damage": [ 0, 1 ] },
       { "item": "sailor_dress", "damage": [ 0, 1 ] },
       { "item": "skirt", "damage": [ 0, 1 ] },
-      { "item": "skinny_tie" },
+      { "item": "tights" },
       { "item": "socks" },
       { "item": "sneakers" }
     ]

@@ -19,16 +19,13 @@
     "melee_skill": 6,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "armor_bash": 7,
-    "armor_cut": 5,
-    "armor_stab": 5,
-    "armor_acid": 9,
+    "armor": { "bash": 7, "acid": 9, "stab": 5, "cut": 5 },
+    "bodytype": "human",
     "dodge": 3,
     "vision_night": 10,
     "harvest": "human",
     "starting_ammo": { "reloaded_22_lr": 50, "reloaded_22_fmj": 50 },
     "death_drops": "default_cambion_male_death_drops",
-    "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
       "HEARS",
@@ -41,7 +38,6 @@
       "GROUP_BASH",
       "CLIMBS",
       "HUMAN",
-      "BONES",
       "INTERIOR_AMMO"
     ]
   },
@@ -81,7 +77,8 @@
     "vision_day": 30,
     "vision_night": 20,
     "harvest": "human",
-    "death_function": [ "NORMAL" ],
+    "bodytype": "human",
+    "death_function": { "effect": { "id": "death_guilt", "min_level": 6 } },
     "flags": [
       "SEES",
       "HEARS",
@@ -93,9 +90,7 @@
       "BASHES",
       "CLIMBS",
       "GROUP_MORALE",
-      "GUILT",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ]
   },
   {
@@ -118,27 +113,13 @@
     "melee_skill": 3,
     "melee_dice": 1,
     "melee_dice_sides": 3,
-    "armor_bash": 2,
-    "armor_cut": 1,
-    "armor_stab": 1,
+    "armor": { "bash": 2, "cut": 1, "stab": 1 },
     "dodge": 2,
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
-    "death_function": [ "NORMAL" ],
-    "flags": [
-      "SEES",
-      "HEARS",
-      "SMELLS",
-      "PATH_AVOID_DANGER_1",
-      "GRABS",
-      "WARM",
-      "PUSH_MON",
-      "FLIES",
-      "GROUP_MORALE",
-      "HUMAN",
-      "BONES"
-    ]
+    "bodytype": "human",
+    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_1", "GRABS", "WARM", "PUSH_MON", "FLIES", "GROUP_MORALE", "HUMAN" ]
   },
   {
     "id": "mon_lessor_succubi",
@@ -186,18 +167,16 @@
     "melee_skill": 5,
     "melee_dice": 3,
     "melee_dice_sides": 4,
-    "melee_cut": 3,
-    "armor_bash": 7,
-    "armor_cut": 5,
-    "armor_stab": 5,
-    "armor_acid": 9,
+    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
+    "armor": { "bash": 7, "cut": 5, "stab": 5, "acid": 9 },
     "attack_effs": [ { "id": "corrupt", "duration": 25 } ],
     "dodge": 4,
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
+    "bodytype": "human",
     "death_drops": "succubi_sadist_death_drops",
-    "death_function": [ "NORMAL" ],
+    "regen_morale": true,
     "flags": [
       "SEES",
       "HEARS",
@@ -209,9 +188,7 @@
       "FLIES",
       "FIREPROOF",
       "GROUP_MORALE",
-      "REGEN_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ]
   },
   {
@@ -235,30 +212,15 @@
     "melee_skill": 4,
     "melee_dice": 0,
     "melee_dice_sides": 1,
-    "armor_bash": 5,
-    "armor_cut": 3,
-    "armor_stab": 3,
-    "armor_acid": 5,
+    "armor": { "bash": 5, "cut": 3, "stab": 3, "acid": 5 },
     "dodge": 2,
     "vision_day": 30,
     "vision_night": 40,
     "harvest": "human",
+    "bodytype": "human",
     "death_drops": "arch_succubi_death_drops",
-    "death_function": [ "NORMAL" ],
-    "flags": [
-      "SEES",
-      "HEARS",
-      "SMELLS",
-      "PATH_AVOID_DANGER_1",
-      "WARM",
-      "PUSH_MON",
-      "FLIES",
-      "FIREPROOF",
-      "GROUP_MORALE",
-      "REGEN_MORALE",
-      "HUMAN",
-      "BONES"
-    ]
+    "regen_morale": true,
+    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_1", "WARM", "PUSH_MON", "FLIES", "FIREPROOF", "GROUP_MORALE", "HUMAN" ]
   },
   {
     "id": "mon_succubi_exhibitionism",
@@ -285,8 +247,9 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
+    "bodytype": "human",
     "death_drops": "arch_succubi_death_drops",
-    "death_function": [ "NORMAL" ],
+    "regen_morale": true,
     "flags": [
       "SEES",
       "HEARS",
@@ -298,9 +261,7 @@
       "FLIES",
       "FIREPROOF",
       "GROUP_MORALE",
-      "REGEN_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ]
   },
   {
@@ -324,16 +285,15 @@
     "melee_skill": 3,
     "melee_dice": 1,
     "melee_dice_sides": 3,
-    "armor_bash": 8,
-    "armor_cut": 1,
-    "armor_stab": 1,
+    "armor": { "bash": 8, "cut": 1, "stab": 1, "acid": 0 },
     "dodge": 2,
     "starting_ammo": { "milk": 8 },
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
+    "bodytype": "human",
+    "regen_morale": true,
     "death_drops": "arch_succubi_death_drops",
-    "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
       "HEARS",
@@ -345,9 +305,7 @@
       "FLIES",
       "FIREPROOF",
       "GROUP_MORALE",
-      "REGEN_MORALE",
       "HUMAN",
-      "BONES",
       "MILKABLE"
     ]
   },
@@ -376,8 +334,10 @@
     "vision_day": 30,
     "vision_night": 40,
     "harvest": "human",
+    "bodytype": "human",
+    "regen_morale": true,
+    "regenerates_in_dark": true,
     "death_drops": "greater_succubi_death_drops",
-    "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
       "HEARS",
@@ -386,13 +346,10 @@
       "GRABS",
       "WARM",
       "NIGHT_INVISIBILITY",
-      "REGENERATES_IN_DARK",
       "PUSH_MON",
       "FLIES",
       "FIREPROOF",
-      "REGEN_MORALE",
       "HUMAN",
-      "BONES",
       "MILKABLE"
     ]
   },
@@ -441,16 +398,14 @@
     "melee_skill": 5,
     "melee_dice": 3,
     "melee_dice_sides": 6,
-    "armor_bash": 7,
-    "armor_cut": 5,
-    "armor_stab": 5,
-    "armor_acid": 9,
+    "armor": { "bash": 7, "cut": 5, "stab": 5, "acid": 9 },
     "dodge": 4,
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
+    "regen_morale": true,
+    "bodytype": "human",
     "death_drops": "arch_incubi_death_drops",
-    "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
       "HEARS",
@@ -465,9 +420,7 @@
       "DESTROYS",
       "FIREPROOF",
       "GROUP_MORALE",
-      "REGEN_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ]
   },
   {
@@ -495,9 +448,11 @@
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
+    "dissect": "dissect_mon_broken_cyborg",
+    "bodytype": "human",
     "starting_ammo": { "d_cumshot": 20 },
+    "regen_morale": true,
     "death_drops": "arch_incubi_death_drops",
-    "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
       "HEARS",
@@ -509,12 +464,9 @@
       "FLIES",
       "FIREPROOF",
       "GROUP_MORALE",
-      "REGEN_MORALE",
       "HUMAN",
-      "BONES",
       "ELECTRIC",
       "ELECTRONIC",
-      "CBM_CIV",
       "INTERIOR_AMMO"
     ]
   },
@@ -539,16 +491,15 @@
     "melee_skill": 5,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "armor_bash": 2,
-    "armor_cut": 1,
-    "armor_stab": 1,
+    "armor": { "bash": 2, "cut": 1, "stab": 1, "acid": 0 },
     "dodge": 3,
     "vision_day": 30,
     "vision_night": 30,
     "harvest": "human",
+    "bodytype": "human",
     "starting_ammo": { "flintlock_ammo": 24, "flintlock_ammo_magic": 6 },
+    "regen_morale": true,
     "death_drops": "incubi_hoplophilia_death_drops",
-    "death_function": [ "NORMAL" ],
     "flags": [
       "SEES",
       "HEARS",
@@ -560,9 +511,7 @@
       "FLIES",
       "FIREPROOF",
       "GROUP_MORALE",
-      "REGEN_MORALE",
       "HUMAN",
-      "BONES",
       "INTERIOR_AMMO",
       "PRIORITIZE_TARGETS"
     ]
@@ -602,8 +551,7 @@
       "BASHES",
       "CLIMBS",
       "GROUP_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ],
     "death_drops": "corrupted_schoolgirl_death_drops",
     "upgrades": { "half_life": 14, "into_group": "GROUP_SUCCUBI_UPGRADE" }
@@ -630,8 +578,7 @@
       "BASHES",
       "CLIMBS",
       "GROUP_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ],
     "death_drops": "corrupted_schoolteacher_female_death_drops",
     "upgrades": { "half_life": 14, "into_group": "GROUP_SUCCUBI_UPGRADE" }
@@ -658,8 +605,7 @@
       "BASHES",
       "CLIMBS",
       "GROUP_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ],
     "death_drops": "corrupted_schoolboy_death_drops",
     "upgrades": { "half_life": 14, "into_group": "GROUP_INCUBI_UPGRADE" }
@@ -686,8 +632,7 @@
       "BASHES",
       "CLIMBS",
       "GROUP_MORALE",
-      "HUMAN",
-      "BONES"
+      "HUMAN"
     ],
     "death_drops": "corrupted_schoolteacher_male_death_drops",
     "upgrades": { "half_life": 14, "into_group": "GROUP_INCUBI_UPGRADE" }
@@ -700,7 +645,6 @@
     "default_faction": "fiend",
     "species": [ "FIEND", "HERM" ],
     "diff": 50,
-    "size": "LARGE",
     "hp": 300,
     "speed": 115,
     "material": [ "flesh" ],
@@ -711,28 +655,15 @@
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 4,
-    "melee_cut": 8,
-    "armor_bash": 14,
-    "armor_cut": 12,
-    "armor_stab": 8,
+    "melee_damage": [ { "damage_type": "cut", "amount": 8 } ],
+    "armor": { "bash": 14, "cut": 12, "stab": 8, "acid": 0 },
     "dodge": 3,
     "vision_night": 30,
     "harvest": "human",
-    "death_function": [ "DISINTEGRATE" ],
-    "flags": [
-      "IMMOBILE",
-      "BLEED",
-      "SEES",
-      "GOODHEARING",
-      "SMELLS",
-      "FIREPROOF",
-      "ACIDPROOF",
-      "GRABS",
-      "WARM",
-      "NOGIB",
-      "REGENERATES_IN_DARK",
-      "PLASTIC"
-    ],
+    "bodytype": "human",
+    "death_function": { "corpse_type": "NO_CORPSE" },
+    "regenerates_in_dark": true,
+    "flags": [ "IMMOBILE", "SEES", "GOODHEARING", "SMELLS", "FIREPROOF", "ACIDPROOF", "GRABS", "WARM", "NOGIB", "PLASTIC" ],
     "death_drops": "goathead_demon_death_drops"
   },
   {
@@ -756,7 +687,6 @@
     "default_faction": "fiend",
     "species": [ "HORROR" ],
     "diff": 5,
-    "size": "MEDIUM",
     "hp": 70,
     "speed": 95,
     "material": [ "flesh" ],
@@ -767,13 +697,11 @@
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "armor_bash": 2,
-    "armor_cut": 1,
-    "armor_stab": 1,
+    "armor": { "bash": 2, "cut": 1, "stab": 1, "acid": 0 },
     "dodge": 2,
     "harvest": "human",
-    "death_function": [ "NORMAL" ],
-    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_2", "GRABS", "WARM", "PUSH_MON", "HUMAN", "BONES" ]
+    "bodytype": "human",
+    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_2", "GRABS", "WARM", "PUSH_MON", "HUMAN" ]
   },
   {
     "id": "mon_dark_summoner",
@@ -783,7 +711,6 @@
     "default_faction": "fiend",
     "species": [ "HORROR" ],
     "diff": 5,
-    "size": "MEDIUM",
     "hp": 70,
     "speed": 95,
     "material": [ "flesh" ],
@@ -794,13 +721,11 @@
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "armor_bash": 2,
-    "armor_cut": 1,
-    "armor_stab": 1,
+    "armor": { "bash": 2, "cut": 1, "stab": 1, "acid": 0 },
     "dodge": 2,
     "harvest": "human",
-    "death_function": [ "NORMAL" ],
-    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_2", "GRABS", "WARM", "PUSH_MON", "HUMAN", "BONES" ]
+    "bodytype": "human",
+    "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_DANGER_2", "GRABS", "WARM", "PUSH_MON", "HUMAN" ]
   },
   {
     "//": "↓ここからはイベント発火用のダミーモンスター。special_attacksでイベントだけ呼んで消える。↓",

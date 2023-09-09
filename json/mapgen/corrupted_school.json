@@ -134,7 +134,6 @@
         "t": [ "t_rock_floor" ],
         "w": [ "t_reinforced_glass" ],
         "W": [ "t_reinforced_glass_shutter" ],
-        "x": [ "t_console_broken" ],
         "|": [ "t_brick_wall" ]
       },
       "furniture": {
@@ -152,7 +151,8 @@
         "l": [ "f_locker" ],
         "o": [ "f_bookcase" ],
         "r": [ "f_rack" ],
-        "t": [ "f_table" ]
+        "t": [ "f_table" ],
+        "x": [ "f_console_broken" ]
       },
       "toilets": { "T": {  } },
       "items": {
@@ -216,7 +216,7 @@
         { "monster": "GROUP_CORRUPTED_SCHOOL", "x": [ 48, 71 ], "y": [ 54, 70 ], "repeat": [ 1, 2 ], "density": 1 }
       ],
       "place_monster": [ { "monster": "mon_goathead_demon", "x": 28, "y": 21 }, { "monster": "mon_demonbeing_schoolgirl", "x": 69, "y": 50 } ],
-      "place_vehicles": [ { "vehicle": "school_vehicles", "x": 9, "y": 7, "chance": 25, "fuel": 0, "status": 0, "rotation": 0 } ]
+      "//place_vehicles": [ { "vehicle": "school_vehicles", "x": 9, "y": 7, "chance": 25, "fuel": 0, "status": 0, "rotation": 0 } ]
     }
   }
 ]
