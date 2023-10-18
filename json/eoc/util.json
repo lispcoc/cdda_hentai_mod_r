@@ -1,0 +1,39 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_lost_virgin",
+    "//": "function lost_virgin(me, is_good, p)",
+    "condition": { "and": [ { "expects_vars": [ "is_good" ] }, { "u_has_trait": "VIRGIN" } ] },
+    "effect": [
+      {
+        "if": { "compare_string": [ "yes", { "context_val": "is_good" } ] },
+        "then": [ { "u_message": "You have lost your virginity!", "type": "good" } ],
+        "else": [
+          { "u_message": "You have been robbed of your virginity!", "type": "bad" },
+          {
+            "u_add_morale": "morale_deflower_bad",
+            "bonus": -20,
+            "max_bonus": -20,
+            "duration": "3 days",
+            "decay_start": "12 hours"
+          }
+        ]
+      },
+      { "run_eoc_with": "eoc_hmr_deflower_pain", "variables": { "is_good": { "context_val": "is_good" } } },
+      { "u_lose_trait": "VIRGIN" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_deflower_pain",
+    "//": "function deflower_pain(me, is_good)",
+    "condition": { "and": [ { "expects_vars": [ "is_good" ] }, "u_female" ] },
+    "effect": [
+      {
+        "if": { "compare_string": [ "yes", { "context_val": "is_good" } ] },
+        "then": [ { "u_message": "It hurts just a bit.", "type": "good" }, { "math": [ "u_pain()", "+=", "5" ] } ],
+        "else": [ { "u_message": "It hurts!", "type": "bad" }, { "math": [ "u_pain()", "+=", "15" ] } ]
+      }
+    ]
+  }
+]
