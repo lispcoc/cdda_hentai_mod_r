@@ -35,5 +35,43 @@
         "else": [ { "u_message": "It hurts!", "type": "bad" }, { "math": [ "u_pain()", "+=", "15" ] } ]
       }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_get_willing",
+    "//": "function get_willing(partner)",
+    "//2": "@todo implement opinions",
+    "condition": { "expects_vars": [ "rval" ] },
+    "effect": [
+      {
+        "if": "npc_hostile",
+        "then": [ { "math": [ "v_rval", "=", "-999" ] } ],
+        "else": [
+          { "run_eocs": "eoc_hmr_calc_persuade_skill" },
+          { "run_eocs": "eoc_hmr_calc_intimidation" },
+          { "math": [ "_trust", "=", "u_persuade_skill" ] },
+          { "math": [ "_fear", "=", "u_intimidation" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_calc_persuade_skill",
+    "//": "helper - function get_willing(partner)",
+    "effect": [
+      {
+        "math": [ "u_persuade_skill", "=", "u_val('intelligence') + u_val('perception') + u_val('perception') + u_skill('speech') * 3" ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_calc_intimidation",
+    "//": "helper - function get_willing(partner)",
+    "effect": [
+      { "math": [ "u_intimidation", "=", "u_val('strength') * 2" ] },
+      { "if": "u_has_weapon", "then": [ { "math": [ "u_has_weapon", "+=", "10" ] } ] }
+    ]
   }
 ]

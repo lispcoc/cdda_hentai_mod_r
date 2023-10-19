@@ -1,0 +1,113 @@
+[
+  {
+    "type": "snippet",
+    "category": "<MOVINGDOING_TEXTS>",
+    "text": [ "*Lewd Sounds*", "\"Haa, haa♥\"", "*Snu-Snu in progress*", "\"La di da♪\"", "\"Ufufu♪\"", "\"WooHoo♪\"" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_sex_doturn",
+    "//": "SEX.act_sex_do_turn = function(act, p)",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": true,
+    "effect": [
+      { "u_add_var": "hmr_activity_current_turn", "time": true },
+      { "math": [ "ps_min_woc", "=", "u_val('time: 1 m')" ] },
+      { "u_message": "<MOVINGDOING_TEXTS>" },
+      { "u_add_effect": "movingdoing", "duration": "1 minutes" },
+      {
+        "u_add_morale": "morale_sex_good",
+        "bonus": { "math": [ "max(u_val('dexterity'), n_val('dexterity'))" ] },
+        "max_bonus": 0,
+        "duration": "60 minutes",
+        "decay_start": "15 minutes"
+      },
+      {
+        "if": { "compare_string": [ "yes", { "u_val": "hmr_activity_is_love_sex" } ] },
+        "then": [
+          {
+            "u_run_npc_eocs": [
+              {
+                "id": "eoc_hmr_sex_doturn_partner",
+                "condition": { "u_has_effect": "movingdoing" },
+                "effect": {
+                  "u_add_morale": "morale_sex_good",
+                  "bonus": { "math": [ "max(u_val('dexterity'), n_val('dexterity'))" ] },
+                  "max_bonus": 0,
+                  "duration": "60 minutes",
+                  "decay_start": "15 minutes"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "for non-followers non-friend partners",
+    "type": "snippet",
+    "category": "<fun_stuff_bye_fear>",
+    "text": [ "*Whimpers*", "*Cries*", "Why... Why...", "I didn't want this...", "Why me... Why me..." ]
+  },
+  {
+    "//": "act was interrupted",
+    "type": "snippet",
+    "category": "<fun_stuff_interrupt>",
+    "text": [ "Hey!", "Done already?", "I'm not finished yet!", "What's wrong?", "Why did you stop?" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_sex_finish",
+    "//": "SEX.act_sex_finish = function(act, p)",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": {
+      "and": [ { "compare_string": [ "ACT_SEX", { "context_val": "activity" } ] }, { "math": [ "_canceled", "==", "0" ] } ]
+    },
+    "effect": [
+      { "u_lose_effect": "movingdoing" },
+      {
+        "if": { "math": [ "_canceled", "==", "0" ] },
+        "then": [
+          { "u_message": "*Fun things* are now over." },
+          { "u_lose_effect": "lust" },
+          {
+            "u_run_npc_eocs": [
+              {
+                "id": "eoc_hmr_sex_doturn_partner",
+                "condition": { "u_has_effect": "movingdoing" },
+                "effect": [ { "u_lose_effect": "movingdoing" }, { "u_lose_effect": "lust" } ],
+                "//": "@todo パートナーがいれば印象度を変動させる。"
+              }
+            ]
+          },
+          { "u_spawn_item": "h_semen", "container": "used_condom", "suppress_message": true },
+          {
+            "if": "u_male",
+            "then": [ { "u_message": "You finish inside the condom!", "type": "good", "popup": true } ],
+            "else": [ { "u_message": "<npc_name> finishes inside the condom!", "type": "good", "popup": true } ]
+          },
+          { "map_spawn_item": "h_semen" }
+        ],
+        "else": [
+          {
+            "u_run_npc_eocs": [
+              {
+                "id": "eoc_hmr_sex_doturn_partner",
+                "condition": { "u_has_effect": "movingdoing" },
+                "effect": [ { "u_lose_effect": "movingdoing" } ]
+              }
+            ]
+          },
+          {
+            "if": { "compare_string": [ "yes", { "u_val": "hmr_activity_is_love_sex" } ] },
+            "then": [ { "u_message": "<npc_name> saying \"<fun_stuff_interrupt>\"" } ],
+            "else": [ { "u_message": "<npc_name> saying \"<fun_stuff_bye_fear>\"" } ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_anthro_set_pet_pattern",
+    "//": "ANTHRO.get_anthro_pet_pattern = function(monster)",
+    "effect": [
+      {
+        "if": { "npc_bodytype": "dog" },
+        "then": { "npc_add_var": "pet_pattern", "value": "CANINE" },
+        "else": {
+          "if": { "npc_bodytype": "cat" },
+          "then": { "npc_add_var": "pet_pattern", "value": "FELINE" },
+          "else": {
+            "if": { "npc_bodytype": "bear" },
+            "then": { "npc_add_var": "pet_pattern", "value": "URSINE" },
+            "else": {
+              "if": { "and": [ { "npc_has_species": "CUBI" }, { "npc_has_species": "FEMALE" } ] },
+              "then": { "npc_add_var": "pet_pattern", "value": "SUCCUBI" },
+              "else": {
+                "if": { "and": [ { "npc_has_species": "CUBI" }, { "npc_has_species": "MALE" } ] },
+                "then": { "npc_add_var": "pet_pattern", "value": "INCUBI" }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_anthro_main",
+    "//": "ANTHRO.main = function(monster, selected_point)",
+    "effect": [
+      { "npc_add_var": "pet_pattern", "value": "NULL" },
+      { "run_eocs": "eoc_hmr_anthro_set_pet_pattern" },
+      {
+        "if": { "npc_has_var": "pet_pattern", "value": "NULL" },
+        "then": [ { "u_message": "This creature cannot be transformed to an NPC." } ],
+        "else": [
+          {
+            "if": {
+              "u_query": "Once this pet is transformed into an NPC, you won't be able to change them again.  Confirm?",
+              "default": false
+            },
+            "then": [
+              {
+                "set_string_var": "anthro_canine_morehuman_female",
+                "target_var": { "context_val": "npc_temp_id" },
+                "//": "@todo 選択メニューの実装"
+              },
+              { "u_spawn_npc": { "context_val": "npc_temp_id" }, "real_count": 1, "min_radius": 1, "max_radius": 3 },
+              "npc_die"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
