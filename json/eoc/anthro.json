@@ -63,16 +63,117 @@
               "default": false
             },
             "then": [
-              {
-                "set_string_var": "anthro_canine_morehuman_female",
-                "target_var": { "context_val": "npc_temp_id" },
-                "//": "@todo 選択メニューの実装"
-              },
-              { "npc_spawn_npc": { "context_val": "npc_temp_id" }, "real_count": 1, "min_radius": 1, "max_radius": 3 },
+              { "run_eocs": "hmr_anthro_menu_1" },
+              { "npc_spawn_npc": { "u_val": "npc_temp_id" }, "real_count": 1, "min_radius": 1, "max_radius": 3 },
               "u_die"
             ]
           }
         ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "hmr_anthro_menu_1",
+    "effect": [
+      {
+        "if": { "u_has_var": "pet_pattern", "value": "SUCCUBI" },
+        "then": { "u_add_var": "pet_sex", "value": "female" },
+        "else": {
+          "if": { "u_has_var": "pet_pattern", "value": "INCUBI" },
+          "then": { "u_add_var": "pet_sex", "value": "male" },
+          "else": {
+            "run_eoc_selector": [ "hmr_anthro_menu_2", "hmr_anthro_menu_2" ],
+            "title": "Speaking of which, is this Pet male or female?",
+            "names": [ "Male", "Female" ],
+            "keys": [ "a", "b" ],
+            "variables": [ { "val": "male" }, { "val": "female" } ]
+          }
+        }
+      },
+      {
+        "if": { "u_has_var": "pet_pattern", "value": "CANINE" },
+        "then": {
+          "run_eoc_selector": [ "hmr_anthro_menu_3", "hmr_anthro_menu_3", "hmr_anthro_menu_3" ],
+          "title": "How does it look like?",
+          "names": [ "Nearly identical to a Human", "About Half-Half", "Almost like an Animal" ],
+          "keys": [ "a", "b", "c" ],
+          "variables": [
+            { "id_male": "anthro_canine_morehuman_male", "id_female": "anthro_canine_morehuman_female" },
+            { "id_male": "anthro_canine_half_male", "id_female": "anthro_canine_half_female" },
+            { "id_male": "anthro_canine_lesshuman_male", "id_female": "anthro_canine_lesshuman_female" }
+          ]
+        }
+      },
+      {
+        "if": { "u_has_var": "pet_pattern", "value": "FELINE" },
+        "then": {
+          "run_eoc_selector": [ "hmr_anthro_menu_3", "hmr_anthro_menu_3", "hmr_anthro_menu_3" ],
+          "title": "How does it look like?",
+          "names": [ "Nearly identical to a Human", "About Half-Half", "Almost like an Animal" ],
+          "keys": [ "a", "b", "c" ],
+          "variables": [
+            { "id_male": "anthro_feline_morehuman_male", "id_female": "anthro_feline_morehuman_female" },
+            { "id_male": "anthro_feline_half_male", "id_female": "anthro_feline_half_female" },
+            { "id_male": "anthro_feline_lesshuman_male", "id_female": "anthro_feline_lesshuman_female" }
+          ]
+        }
+      },
+      {
+        "if": { "u_has_var": "pet_pattern", "value": "URSINE" },
+        "then": {
+          "run_eoc_selector": [ "hmr_anthro_menu_3", "hmr_anthro_menu_3", "hmr_anthro_menu_3" ],
+          "title": "How does it look like?",
+          "names": [ "Nearly identical to a Human", "About Half-Half", "Almost like an Animal" ],
+          "keys": [ "a", "b", "c" ],
+          "variables": [
+            { "id_male": "anthro_ursine_morehuman_male", "id_female": "anthro_ursine_morehuman_female" },
+            { "id_male": "anthro_ursine_half_male", "id_female": "anthro_ursine_half_female" },
+            { "id_male": "anthro_ursine_lesshuman_male", "id_female": "anthro_ursine_lesshuman_female" }
+          ]
+        }
+      },
+      {
+        "if": { "u_has_var": "pet_pattern", "value": "SUCCUBI" },
+        "then": {
+          "run_eoc_selector": [ "hmr_anthro_menu_3", "hmr_anthro_menu_3" ],
+          "title": "How does it look like?",
+          "names": [ "Nearly identical to a Human", "Mostly like a Demon" ],
+          "keys": [ "a", "b" ],
+          "variables": [
+            { "id_male": "anthro_succubi_morehuman", "id_female": "anthro_succubi_morehuman" },
+            { "id_male": "anthro_succubi_lesshuman", "id_female": "anthro_succubi_lesshuman" }
+          ]
+        }
+      },
+      {
+        "if": { "u_has_var": "pet_pattern", "value": "INCUBI" },
+        "then": {
+          "run_eoc_selector": [ "hmr_anthro_menu_3", "hmr_anthro_menu_3" ],
+          "title": "How does it look like?",
+          "names": [ "Nearly identical to a Human", "Mostly like a Demon" ],
+          "keys": [ "a", "b" ],
+          "variables": [
+            { "id_male": "anthro_incubi_morehuman", "id_female": "anthro_incubi_morehuman" },
+            { "id_male": "anthro_incubi_lesshuman", "id_female": "anthro_incubi_lesshuman" }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "hmr_anthro_menu_2",
+    "effect": [ { "set_string_var": { "context_val": "val" }, "target_var": { "u_val": "pet_sex" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "hmr_anthro_menu_3",
+    "effect": [
+      {
+        "if": { "compare_string": [ "male", { "u_val": "pet_sex" } ] },
+        "then": { "set_string_var": { "context_val": "id_male" }, "target_var": { "u_val": "npc_temp_id" } },
+        "else": { "set_string_var": { "context_val": "id_female" }, "target_var": { "u_val": "npc_temp_id" } }
       }
     ]
   }

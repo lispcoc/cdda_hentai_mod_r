@@ -1,0 +1,23 @@
+[
+  {
+    "id": "hmr_pet_cubi_spell",
+    "type": "SPELL",
+    "name": "hmr_pet_cubi_spell",
+    "description": "dummy",
+    "valid_targets": [ "hostile" ],
+    "targeted_monster_species": [ "CUBI" ],
+    "flags": [ "NO_HANDS", "SILENT", "NO_FAIL", "NO_PROJECTILE" ],
+    "energy_source": "MANA",
+    "difficulty": 0,
+    "effect": "effect_on_condition",
+    "effect_str": "eoc_hmr_pet_cubi_main",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "base_energy_cost": 100,
+    "min_range": 1,
+    "max_range": 1,
+    "min_duration": 0,
+    "max_duration": 0,
+    "duration_increment": 0
+  }
+]
