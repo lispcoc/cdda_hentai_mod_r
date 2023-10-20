@@ -8,9 +8,6 @@
     "type": "effect_on_condition",
     "id": "eoc_hmr_sex_doturn",
     "//": "SEX.act_sex_do_turn = function(act, p)",
-    "eoc_type": "EVENT",
-    "required_event": "character_finished_activity",
-    "condition": true,
     "effect": [
       { "u_add_var": "hmr_activity_current_turn", "time": true },
       { "math": [ "ps_min_woc", "=", "u_val('time: 1 m')" ] },
@@ -76,7 +73,7 @@
           {
             "u_run_npc_eocs": [
               {
-                "id": "eoc_hmr_sex_doturn_partner",
+                "id": "eoc_hmr_sex_finish_partner",
                 "condition": { "u_has_effect": "movingdoing" },
                 "effect": [ { "u_lose_effect": "movingdoing" }, { "u_lose_effect": "lust" } ],
                 "//": "@todo パートナーがいれば印象度を変動させる。"
@@ -95,7 +92,7 @@
           {
             "u_run_npc_eocs": [
               {
-                "id": "eoc_hmr_sex_doturn_partner",
+                "id": "eoc_hmr_sex_fail_partner",
                 "condition": { "u_has_effect": "movingdoing" },
                 "effect": [ { "u_lose_effect": "movingdoing" } ]
               }

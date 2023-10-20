@@ -90,25 +90,18 @@
   },
   {
     "id": "mutagen_human",
-    "copy-from": "mutagen_flavor",
+    "copy-from": "purifier",
     "type": "COMESTIBLE",
     "name": { "str": "human mutagen", "str_pl": "human mutagens" },
-    "description": "A rare substance of uncertain origins.  Causes you to mutate into human...  In other words, it will revert any inhuman mutations or genetic abnormalities.",
-    "price": 600000,
-    "healthy": 5,
-    "addiction_potential": 8,
-    "//use_action": "PURIFIER"
+    "description": "A rare substance of uncertain origins.  Causes you to mutate into human...  In other words, it will revert any inhuman mutations or genetic abnormalities."
   },
   {
     "id": "iv_mutagen_human",
-    "copy-from": "iv_mutagen_flavor",
+    "copy-from": "iv_purifier",
     "type": "COMESTIBLE",
     "name": { "str": "human serum", "str_pl": "human serum" },
-    "description": "A super-concentrated mutagen.  You need a syringe to inject it...  Depending on how you use it, you may be able to *mutate* non-human organisms into humans.",
-    "price": 900000,
-    "color": "magenta",
-    "addiction_potential": 8,
-    "//use_action": [ "PURIFY_IV", "IUSE_ANTHROPOMORPH" ]
+    "description": "A rare substance of uncertain origins.  Causes you to mutate into human...  In other words, it will revert any inhuman mutations or genetic abnormalities.",
+    "use_action": { "type": "cast_spell", "spell_id": "hmr_anthro_spell", "no_fail": true, "level": 1 }
   },
   {
     "id": "mutagen_fiend",
@@ -116,7 +109,12 @@
     "type": "COMESTIBLE",
     "name": { "str": "demonic mutagen", "str_pl": "demonic mutagens" },
     "description": "A rare substance of uncertain origins.  Causes you to mutate.",
-    "//use_action": { "type": "mutagen", "mutation_category": "FIEND" }
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You inject the black dragon mutagenic primer.",
+      "tools_needed": { "syringe": -1 },
+      "vitamins": [ [ "mutagen_FIEND", 225 ], [ "mutagen", 125 ] ]
+    }
   },
   {
     "id": "iv_mutagen_fiend",
@@ -125,6 +123,11 @@
     "name": { "str": "demonic serum", "str_pl": "demonic serum" },
     "description": "A super-concentrated mutagen strongly resembling blood.  You need a syringe to inject it...  if you really want to?",
     "color": "red",
-    "//use_action": { "type": "mutagen_iv", "mutation_category": "FIEND" }
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You inject the black dragon mutagenic primer.",
+      "tools_needed": { "syringe": -1 },
+      "vitamins": [ [ "mutagen_FIEND", 450, 550 ] ]
+    }
   }
 ]

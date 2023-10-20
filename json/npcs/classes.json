@@ -12,7 +12,14 @@
     "worn_override": "EMPTY_GROUP",
     "carry_override": "EMPTY_GROUP",
     "weapon_override": "EMPTY_GROUP",
-    "traits": [ [ "VIRGIN", 100 ], [ "SMALL_BREAST", 33 ], [ "BIG_BREAST", 33 ] ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      [ "VIRGIN", 100 ],
+      [ "SMALL_BREAST", 33 ],
+      [ "BIG_BREAST", 33 ]
+    ]
   },
   {
     "type": "npc_class",
@@ -34,6 +41,9 @@
     "carry_override": "child_items",
     "weapon_override": "EMPTY_GROUP",
     "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
       [ "GOODMEMORY", 100 ],
       [ "LOVES_BOOKS", 100 ],
       [ "NONADDICTIVE", 100 ],
@@ -135,7 +145,13 @@
     "name": "Pet (Succubus)",
     "common": false,
     "worn_override": "default_succubi_clothes",
-    "traits": [ { "group": "trait_anthro_common_succubi" }, { "group": "trait_anthro_cubi_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_succubi" },
+      { "group": "trait_anthro_cubi_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -145,7 +161,13 @@
     "name": "Pet (Succubus)",
     "common": false,
     "worn_override": "default_succubi_clothes",
-    "traits": [ { "group": "trait_anthro_common_succubi" }, { "group": "trait_anthro_cubi_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_succubi" },
+      { "group": "trait_anthro_cubi_lesshuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -155,7 +177,13 @@
     "name": "Pet (Incubus)",
     "common": false,
     "worn_override": "default_incubi_clothes",
-    "traits": [ { "group": "trait_anthro_common_incubi" }, { "group": "trait_anthro_cubi_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_incubi" },
+      { "group": "trait_anthro_cubi_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -165,7 +193,13 @@
     "name": "Pet (Incubus)",
     "common": false,
     "worn_override": "default_incubi_clothes",
-    "traits": [ { "group": "trait_anthro_common_incubi" }, { "group": "trait_anthro_cubi_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_incubi" },
+      { "group": "trait_anthro_cubi_lesshuman" }
+    ]
   },
   {
     "//": "ペット(犬)。人間に近い。",
@@ -174,7 +208,13 @@
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_canine_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_canine_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -183,7 +223,13 @@
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_canine_half" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_canine_half" }
+    ]
   },
   {
     "type": "npc_class",
@@ -192,7 +238,13 @@
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_canine_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_canine_lesshuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -201,7 +253,13 @@
     "copy-from": "NC_ANTHRO_FELINE",
     "name": "Pet (Cat)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_feline_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_feline_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -210,7 +268,13 @@
     "copy-from": "NC_ANTHRO_FELINE",
     "name": "Pet (Cat)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_feline_half" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_feline_half" }
+    ]
   },
   {
     "type": "npc_class",
@@ -219,7 +283,13 @@
     "copy-from": "NC_ANTHRO_FELINE",
     "name": "Pet (Cat)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_feline_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_feline_lesshuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -228,7 +298,13 @@
     "copy-from": "NC_ANTHRO_URSINE",
     "name": "Pet (Bear)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_ursine_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_ursine_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -237,7 +313,13 @@
     "copy-from": "NC_ANTHRO_URSINE",
     "name": "Pet (Bear)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_ursine_half" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_ursine_half" }
+    ]
   },
   {
     "type": "npc_class",
@@ -246,7 +328,13 @@
     "copy-from": "NC_ANTHRO_URSINE",
     "name": "Pet (Bear)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_male" }, { "group": "trait_anthro_ursine_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_male" },
+      { "group": "trait_anthro_ursine_lesshuman" }
+    ]
   },
   {
     "//": "ペット(犬)。人間に近い。",
@@ -255,7 +343,13 @@
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_canine_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_canine_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -264,7 +358,13 @@
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_canine_half" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_canine_half" }
+    ]
   },
   {
     "type": "npc_class",
@@ -273,7 +373,13 @@
     "copy-from": "NC_ANTHRO_CANINE",
     "name": "Pet (Dog)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_canine_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_canine_lesshuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -282,7 +388,13 @@
     "copy-from": "NC_ANTHRO_FELINE",
     "name": "Pet (Cat)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_feline_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_feline_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -291,7 +403,13 @@
     "copy-from": "NC_ANTHRO_FELINE",
     "name": "Pet (Cat)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_feline_half" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_feline_half" }
+    ]
   },
   {
     "type": "npc_class",
@@ -300,7 +418,13 @@
     "copy-from": "NC_ANTHRO_FELINE",
     "name": "Pet (Cat)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_feline_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_feline_lesshuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -309,7 +433,13 @@
     "copy-from": "NC_ANTHRO_URSINE",
     "name": "Pet (Bear)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_ursine_morehuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_ursine_morehuman" }
+    ]
   },
   {
     "type": "npc_class",
@@ -318,7 +448,13 @@
     "copy-from": "NC_ANTHRO_URSINE",
     "name": "Pet (Bear)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_ursine_half" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_ursine_half" }
+    ]
   },
   {
     "type": "npc_class",
@@ -327,6 +463,12 @@
     "copy-from": "NC_ANTHRO_URSINE",
     "name": "Pet (Bear)",
     "common": false,
-    "traits": [ { "group": "trait_anthro_common_female" }, { "group": "trait_anthro_ursine_lesshuman" } ]
+    "traits": [
+      { "group": "BG_survival_story_EVACUEE" },
+      { "group": "NPC_starting_traits" },
+      { "group": "Appearance_demographics" },
+      { "group": "trait_anthro_common_female" },
+      { "group": "trait_anthro_ursine_lesshuman" }
+    ]
   }
 ]

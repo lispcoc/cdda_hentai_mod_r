@@ -4,6 +4,7 @@
     "type": "activity_type",
     "suspendable": false,
     "activity_level": "LIGHT_EXERCISE",
-    "based_on": "speed"
+    "based_on": "speed",
+    "do_turn_eoc": "eoc_hmr_sex_doturn"
   }
 ]

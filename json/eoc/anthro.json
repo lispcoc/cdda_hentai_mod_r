@@ -5,20 +5,20 @@
     "//": "ANTHRO.get_anthro_pet_pattern = function(monster)",
     "effect": [
       {
-        "if": { "npc_bodytype": "dog" },
-        "then": { "npc_add_var": "pet_pattern", "value": "CANINE" },
+        "if": { "u_bodytype": "dog" },
+        "then": { "u_add_var": "pet_pattern", "value": "CANINE" },
         "else": {
-          "if": { "npc_bodytype": "cat" },
-          "then": { "npc_add_var": "pet_pattern", "value": "FELINE" },
+          "if": { "u_bodytype": "cat" },
+          "then": { "u_add_var": "pet_pattern", "value": "FELINE" },
           "else": {
-            "if": { "npc_bodytype": "bear" },
-            "then": { "npc_add_var": "pet_pattern", "value": "URSINE" },
+            "if": { "u_bodytype": "bear" },
+            "then": { "u_add_var": "pet_pattern", "value": "URSINE" },
             "else": {
-              "if": { "and": [ { "npc_has_species": "CUBI" }, { "npc_has_species": "FEMALE" } ] },
-              "then": { "npc_add_var": "pet_pattern", "value": "SUCCUBI" },
+              "if": { "and": [ { "u_has_species": "CUBI" }, { "u_has_species": "FEMALE" } ] },
+              "then": { "u_add_var": "pet_pattern", "value": "SUCCUBI" },
               "else": {
-                "if": { "and": [ { "npc_has_species": "CUBI" }, { "npc_has_species": "MALE" } ] },
-                "then": { "npc_add_var": "pet_pattern", "value": "INCUBI" }
+                "if": { "and": [ { "u_has_species": "CUBI" }, { "u_has_species": "MALE" } ] },
+                "then": { "u_add_var": "pet_pattern", "value": "INCUBI" }
               }
             }
           }
@@ -27,19 +27,39 @@
     ]
   },
   {
+    "id": "hmr_anthro_spell",
+    "type": "SPELL",
+    "name": "hmr_anthro_spell",
+    "description": "dummy",
+    "valid_targets": [ "ally" ],
+    "flags": [ "NO_HANDS", "SILENT", "NO_FAIL", "NO_PROJECTILE" ],
+    "energy_source": "MANA",
+    "difficulty": 0,
+    "effect": "effect_on_condition",
+    "effect_str": "eoc_hmr_anthro_main",
+    "shape": "blast",
+    "base_casting_time": 200,
+    "base_energy_cost": 100,
+    "min_range": 1,
+    "max_range": 1,
+    "min_duration": 0,
+    "max_duration": 0,
+    "duration_increment": 0
+  },
+  {
     "type": "effect_on_condition",
     "id": "eoc_hmr_anthro_main",
     "//": "ANTHRO.main = function(monster, selected_point)",
     "effect": [
-      { "npc_add_var": "pet_pattern", "value": "NULL" },
+      { "u_add_var": "pet_pattern", "value": "NULL" },
       { "run_eocs": "eoc_hmr_anthro_set_pet_pattern" },
       {
-        "if": { "npc_has_var": "pet_pattern", "value": "NULL" },
-        "then": [ { "u_message": "This creature cannot be transformed to an NPC." } ],
+        "if": { "u_has_var": "pet_pattern", "value": "NULL" },
+        "then": [ { "npc_message": "This creature cannot be transformed to an NPC." } ],
         "else": [
           {
             "if": {
-              "u_query": "Once this pet is transformed into an NPC, you won't be able to change them again.  Confirm?",
+              "npc_query": "Once this pet is transformed into an NPC, you won't be able to change them again.  Confirm?",
               "default": false
             },
             "then": [
@@ -48,8 +68,8 @@
                 "target_var": { "context_val": "npc_temp_id" },
                 "//": "@todo 選択メニューの実装"
               },
-              { "u_spawn_npc": { "context_val": "npc_temp_id" }, "real_count": 1, "min_radius": 1, "max_radius": 3 },
-              "npc_die"
+              { "npc_spawn_npc": { "context_val": "npc_temp_id" }, "real_count": 1, "min_radius": 1, "max_radius": 3 },
+              "u_die"
             ]
           }
         ]
