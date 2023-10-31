@@ -50,7 +50,7 @@
     "symbol": "-",
     "color": "black",
     "flags": [ "FANCY" ],
-    "//use_action": "IUSE_PET_CUBI",
+    "use_action": { "type": "cast_spell", "spell_id": "hmr_pet_cubi_spell", "no_fail": true, "level": 1 },
     "melee_damage": { "bash": 0, "cut": 0 }
   },
   {

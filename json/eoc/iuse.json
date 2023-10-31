@@ -19,5 +19,34 @@
     "min_duration": 0,
     "max_duration": 0,
     "duration_increment": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_hmr_pet_cubi_main",
+    "//": "function iuse_pet_cubi(item, active)",
+    "effect": [
+      {
+        "if": { "math": [ "u_val('friendly')", "==", "-1" ] },
+        "then": [ { "npc_message": "Target is already your Pet.", "type": "info" } ],
+        "else": [
+          {
+            "if": { "math": [ "u_val('friendly')", ">", "0" ] },
+            "then": [
+              { "npc_message": "You manage to take <u_name> by surprise and put on a choker on her!", "type": "info" },
+              { "math": [ "u_val('friendly')", "=", "-1" ] },
+              { "u_add_effect": "pet", "duration": "1 seconds" },
+              { "npc_message": "<u_name> has become your Pet!", "type": "good" },
+              { "u_consume_item": "holy_choker" }
+            ],
+            "else": [
+              {
+                "npc_message": "You try to put a choker on <u_name>, however she resisted the attempt.  Perhaps if she wasn't so alert you could've caught her off guard...",
+                "type": "info"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
