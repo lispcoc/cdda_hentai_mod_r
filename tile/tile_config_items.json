@@ -1,8 +1,7 @@
 [
   {
     "type": "mod_tileset",
-    "compatibility": [ "Custom Tileset", "MshockXottoplus", "MSX++DEAD_PEOPLE" ],
-    "tile_info": [ { "height": 32, "width": 32 } ],
+    "compatibility": [ "Custom Tileset", "UNDEAD_PEOPLE_BASE", "MSX++DEAD_PEOPLE", "MshockXottoplus", "UNDEAD_PEOPLE", "Chibi_Ultica" ],
     "tiles-new": [
       {
         "file": "tile/hentai_items.png",

@@ -4,7 +4,7 @@
     "type": "SPELL",
     "name": "hmr_pet_cubi_spell",
     "description": "dummy",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [ "hostile", "ally" ],
     "targeted_monster_species": [ "CUBI" ],
     "flags": [ "NO_HANDS", "SILENT", "NO_FAIL", "NO_PROJECTILE" ],
     "energy_source": "MANA",
@@ -34,7 +34,7 @@
             "then": [
               { "npc_message": "You manage to take <u_name> by surprise and put on a choker on her!", "type": "info" },
               { "math": [ "u_val('friendly')", "=", "-1" ] },
-              { "u_add_effect": "pet", "duration": "1 seconds" },
+              { "u_add_effect": "pet", "duration": "PERMANENT" },
               { "npc_message": "<u_name> has become your Pet!", "type": "good" },
               { "u_consume_item": "holy_choker" }
             ],
